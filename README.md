@@ -60,6 +60,6 @@ For more information on Artistic 2.0 License see
 
 ## Bugs/Feature requests ##
 
-If you have any bugs or feature requests, [let us know](https://github.com/ArnaudDroitLab/RJMCMCNucleosomes/issues). 
+If you have any bugs or feature requests, [let us know](https://github.com/adeschen/RJMCMCNucleosomes/issues). 
 
 Thanks!

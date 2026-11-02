@@ -20,7 +20,7 @@ Authors@R: c(person("Pascal", "Belleau",
     email="rawane.samb.1@ulaval.ca", role=c("aut")),
     person("Astrid", "Deschênes",
     email="adeschen@hotmail.com",
-    role=c("cre","aut"), comment=c(ORCID = "0000-0001-7846-6749")),
+    role=c("cre","aut"), comment=c(ORCID="0000-0001-7846-6749")),
     person("Khader", "Khadraoui",
     email="Khader.Khadraoui@mat.ulaval.ca", role=c("aut")),
     person("Lajmi", "Lakhal-Chaieb",
@@ -52,8 +52,8 @@ LinkingTo: Rcpp
 SystemRequirements: Rcpp
 Encoding: UTF-8
 License: Artistic-2.0
-URL: https://github.com/ArnaudDroitLab/RJMCMCNucleosomes
-BugReports: https://github.com/ArnaudDroitLab/RJMCMCNucleosomes/issues
+URL: https://github.com/adeschen/RJMCMCNucleosomes
+BugReports: https://github.com/adeschen/RJMCMCNucleosomes/issues
 VignetteBuilder: knitr
 biocViews: BiologicalQuestion, ChIPSeq, NucleosomePositioning,
     Software, StatisticalMethod, Bayesian, Sequencing, Coverage
