@@ -4,3 +4,5 @@
 ## Ignore travis config file
 ^\.travis\.yml$
 
+^\.github$
+
