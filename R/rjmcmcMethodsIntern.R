@@ -84,22 +84,12 @@
 #' ## Print the position of nucleosomes
 #' result$mu
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
+#' @name rjmcmcNucleo
 #' @keywords internal
 #'
-rjmcmcNucleo <- function(startPosForwardReads,
-                                startPosReverseReads,
-                                nbrIterations, kMax, lambda,
-                                minInterval, maxInterval,
-                                minReads = 5L,
-                                adaptIterationsToReads = TRUE, vSeed = -1) {
-    # Call C++ function
-    .Call('C_RJMCMCNucleosomes_rjmcmcNucleo',
-            PACKAGE = 'RJMCMCNucleosomes',
-            startPosForwardReads, startPosReverseReads,
-            nbrIterations, kMax, lambda, minInterval,
-            maxInterval, minReads, adaptIterationsToReads, vSeed)
-}
+NULL
 
 
 #' @title Parameters validation for the \code{\link{rjmcmc}}

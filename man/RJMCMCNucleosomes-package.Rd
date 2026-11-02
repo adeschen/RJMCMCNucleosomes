@@ -7,9 +7,15 @@
 \title{RJMCMCNucleosomes: Bayesian hierarchical model for genome-wide
 nucleosome positioning with high-throughput short-read data (MNase-Seq)}
 \description{
-This package does nucleosome positioning using informative
-Multinomial-Dirichlet prior in a t-mixture with reversible jump
-estimation of nucleosome positions for genome-wide profiling.
+This package detects nucleosome positions genome-wide from
+paired-end or single-end MNase-Seq reads using a Bayesian hierarchical
+model. Read positions are modelled as a mixture of Student's
+t-distributions with an informative Multinomial-Dirichlet prior on
+nucleosome locations, and the number of nucleosomes is estimated with a
+reversible jump Markov chain Monte Carlo (RJMCMC) algorithm. Functions are
+provided to split chromosomes into segments for parallel analysis, merge
+and post-process the predictions, and plot nucleosome positions alongside
+read coverage.
 }
 \seealso{
 \itemize{
