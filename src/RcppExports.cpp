@@ -5,9 +5,14 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // rjmcmcNucleo
 List rjmcmcNucleo(SEXP startPosForwardReads, SEXP startPosReverseReads, long nbrIterations, int kMax, int lambda, int minInterval, int maxInterval, int minReads, bool adaptIterationsToReads, int vSeed);
-RcppExport SEXP RJMCMCNucleosomes_rjmcmcNucleo(SEXP startPosForwardReadsSEXP, SEXP startPosReverseReadsSEXP, SEXP nbrIterationsSEXP, SEXP kMaxSEXP, SEXP lambdaSEXP, SEXP minIntervalSEXP, SEXP maxIntervalSEXP, SEXP minReadsSEXP, SEXP adaptIterationsToReadsSEXP, SEXP vSeedSEXP) {
+RcppExport SEXP _RJMCMCNucleosomes_rjmcmcNucleo(SEXP startPosForwardReadsSEXP, SEXP startPosReverseReadsSEXP, SEXP nbrIterationsSEXP, SEXP kMaxSEXP, SEXP lambdaSEXP, SEXP minIntervalSEXP, SEXP maxIntervalSEXP, SEXP minReadsSEXP, SEXP adaptIterationsToReadsSEXP, SEXP vSeedSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
