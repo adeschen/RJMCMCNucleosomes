@@ -159,16 +159,17 @@ NULL
 #' nbrIterations = 2, kMax = 10, lambda = 1, minReads = 1, minInterval = 100,
 #' maxInterval = 200, adaptIterationsToReads = TRUE, vSeed = -1)}
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
+#' @importFrom methods is
 #' @importFrom S4Vectors isSingleInteger isSingleNumber runValue
 #' @keywords internal
 validateRJMCMCParameters <- function(reads,seqName, nbrIterations,
-                                        kMax, lambda,
-                                        minInterval, maxInterval, minReads,
-                                        adaptIterationsToReads, vSeed) {
+    kMax, lambda, minInterval, maxInterval, minReads, adaptIterationsToReads,
+    vSeed) {
 
-    ## Validate that the reads is a GRanges
-    if (!(class(reads) == "GRanges" )) {
+    ## Validate that the reads is a GRanges class
+    if (!is(reads, "GRanges")) {
         stop(paste0("reads must be a GRanges"))
     }
 
@@ -260,7 +261,8 @@ validateRJMCMCParameters <- function(reads,seqName, nbrIterations,
 #' @importFrom methods is
 #' @importFrom stats setNames
 #' @importFrom GenomicRanges GRangesList
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @keywords internal
 #'
 mergeAllRDSFiles <- function(arrayOfFiles) {
@@ -272,23 +274,23 @@ mergeAllRDSFiles <- function(arrayOfFiles) {
 
     ## Extract information from each file
     for (fileName in arrayOfFiles) {
-        data <- readRDS(file = fileName)
+        data <- readRDS(file=fileName)
+
         ## Only use data from rjmcmcNucleosomes or rjmcmcNucleosomesMerge class
         if ((is(data, "rjmcmcNucleosomesMerge") ||
-                        is(data, "rjmcmcNucleosomes")) &
-                        class(data$mu) == "GRanges") {
-            result$k      <- result$k + data$k
-            if(class(data$mu)=="GRanges"){
+                is(data, "rjmcmcNucleosomes")) && is(data$mu, "GRanges")) {
+            result$k <- result$k + data$k
+            if (is(data$mu, "GRanges")) {
                 mu[[fileName]] <- data$mu
             }
         }
     }
 
     ## Ensure that all values are ordered in ascending order of mu
-    result$mu     <- sort(unlist(mu, use.names=FALSE))
+    result$mu <- sort(unlist(mu, use.names=FALSE))
 
     ## Assign class type to list
-    class(result)<-"rjmcmcNucleosomesMerge"
+    class(result) <- "rjmcmcNucleosomesMerge"
 
     return(result)
 }
@@ -425,17 +427,18 @@ validateDirectoryParameters <- function(directory) {
 #' reads = c(72400, 72431, 72428, 72429, 72426),
 #' resultRJMCMC = NA, extendingSize = 74, chrLength = 10000000)}
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
+#' @importFrom methods is
 #' @importFrom Seqinfo Seqinfo
 #' @importFrom S4Vectors isSingleInteger isSingleNumber
 #' @keywords internal
 #'
-validatePrepMergeParameters <- function(reads, seqName,
-                                            resultRJMCMC, extendingSize,
-                                            chrLength) {
+validatePrepMergeParameters <- function(reads, seqName, resultRJMCMC,
+    extendingSize, chrLength) {
 
-    ## Validate that the reads is a GRanges
-    if (!(class(reads) == "GRanges" )) {
+    ## Validate that the reads is a GRanges class
+    if (!is(reads, "GRanges")) {
         stop(paste0("reads must be a GRanges"))
     }
 
@@ -545,20 +548,22 @@ validatePrepMergeParameters <- function(reads, seqName,
 #' #seqName = "chr_SYNTHETIC", xlab = "position", ylab = "coverage",
 #' #names = c("test_one", "test_false"))}
 #'
-#' @author Astrid Deschenes, Pascal Belleau
+#' @author Astrid Deschênes, Pascal Belleau
+#' @encoding UTF-8
+#' @importFrom methods is
 #' @keywords internal
 #'
 validatePlotNucleosomesParameters <- function(nucleosomePositions,
-                    reads, seqName, xlab, ylab, names) {
+    reads, seqName, xlab, ylab, names) {
 
     ## Validate that nucleosomePositions is a vector
     if(!(is(nucleosomePositions, "GRanges") ||
-         is(nucleosomePositions, "GRangesList"))){
+         is(nucleosomePositions, "GRangesList"))) {
         stop("nucleosomePositions must be a \'GRanges\' or a \'GRangesList\'")
     }
 
     ## Validate that reads is a GRanges object
-    if (!(class(reads) == "GRanges")) {
+    if (!is(reads, "GRanges")) {
         stop("reads must be an object of class \'GRanges\'")
     }
 
@@ -752,7 +757,8 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #' ## Results after post-treatment
 #' postResult
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @importFrom consensusSeekeR findConsensusPeakRegions
 #' @importFrom GenomicRanges GRanges findOverlaps
 #' @importFrom IRanges IRanges
@@ -760,7 +766,6 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #' @importFrom S4Vectors queryHits subjectHits
 #' @importFrom BiocGenerics sapply
 #' @keywords internal
-#'
 postMerge <- function(reads, resultRJMCMC, extendingSize,
                         chrLength, minReads = 5, seqName = NULL)
 {
@@ -785,8 +790,8 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 
     ## Prepare a GRanges using nucleosome positions
     ## Only apply merge when at least one nucleosome is present
-    if (!is.null(resultRJMCMC$mu) && class(resultRJMCMC$mu) == "GRanges"
-        && length(resultRJMCMC$mu) > 0) {
+    if (!is.null(resultRJMCMC$mu) && is(resultRJMCMC$mu, "GRanges") &&
+        length(resultRJMCMC$mu) > 0) {
         nbMu <- length(resultRJMCMC$mu)
         rjmcmc_peak <- resultRJMCMC$mu
         nbPeaks <- length(rjmcmc_peak)
@@ -883,25 +888,25 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #'
 #' @param niter a positive \code{integer} or \code{numeric}, the
 #' number of iterations. Non-integer values of
-#' \code{nbrIterations} will be casted to \code{integer} and truncated towards
+#' \code{nbrIterations} will be cast to \code{integer} and truncated towards
 #' zero.
 #'
-#' @param kMax a positive \code{integer} or \code{numeric}, the maximum number
+#' @param kmax a positive \code{integer} or \code{numeric}, the maximum number
 #' of degrees of freedom per region. Non-integer values
-#' of \code{kMax} will be casted to \code{integer} and truncated towards zero.
+#' of \code{kmax} will be cast to \code{integer} and truncated towards zero.
 #'
-#' @param lambda a positive \code{numeric}, the theorical mean
+#' @param lambda a positive \code{numeric}, the theoretical mean
 #' of the Poisson distribution. Default: 3.
 #'
-#' @param minInterval a \code{numeric}, the minimum distance between two
+#' @param ecartmin a \code{numeric}, the minimum distance between two
 #' nucleosomes.
 #'
-#' @param maxInterval a \code{numeric}, the maximum distance between two
+#' @param ecartmax a \code{numeric}, the maximum distance between two
 #' nucleosomes.
 #'
 #' @param minReads a positive \code{integer} or \code{numeric}, the minimum
-#' number of reads in a potential canditate region. Non-integer values
-#' of \code{minReads} will be casted to \code{integer} and truncated towards
+#' number of reads in a potential candidate region. Non-integer values
+#' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero. Default: 5.
 #'
 #' @param adaptNbrIterations a \code{logical} indicating if the number
@@ -915,10 +920,10 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #' the complete output of the c++ rjmcmc() function is created.
 #' Default : \code{FALSE}.
 #'
-#' @param maxLength a positive \code{integer} or \code{numeric}, the
-#' length of each segment.
+#' @param dirOut a \code{character} string representing the name of the
+#' directory that will contain the resulting outputs. Default: \code{"out"}.
 #'
-#' @return 0.
+#' @return \code{0} when successful.
 #'
 #' @examples
 #'
@@ -932,22 +937,21 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #'     strand = syntheticNucleosomeReads$dataIP$strand)
 #'
 #' # Segmentation of the reads
-#' seg <- segmentation(sampleGRanges, zeta = 147, delta = 50, maxLength = 1000)
+#' seg <- segmentation(sampleGRanges, zeta=147, delta=50, maxLength=1000)
 #' \dontrun{
-#' dir.create("out")
-#' dir.create("out/done")
-#' dir.create("out/results")
+#'     dir.create("out")
+#'     dir.create("out/done")
+#'     dir.create("out/results")
 #'
-#' runCHR(p=1, seg=seg, niter=1000, kmax=330,lambda=3,
-#'             ecartmin=147, ecartmax=297, minReads=5)}
+#'     runCHR(p=1, seg=seg, niter=1000, kmax=330, lambda=3,
+#'         ecartmin=147, ecartmax=297, minReads=5)
+#' }
 #'
 #' @author Pascal Belleau, Astrid Deschenes
 #' @importFrom GenomicRanges strand
 #' @keywords internal
-#'
-runCHR <- function(p, seg, niter, kmax, lambda,
-                    ecartmin, ecartmax, minReads, adaptNbrIterations,
-                    vSeed=-1, saveAsRDS=FALSE, dirOut="out")
+runCHR <- function(p, seg, niter, kmax, lambda, ecartmin, ecartmax, minReads,
+    adaptNbrIterations, vSeed=-1, saveAsRDS=FALSE, dirOut="out")
 {
     dirDone <- paste0(dirOut, "/done")
     dirResults <- paste0(dirOut, "/results")

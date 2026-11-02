@@ -28,15 +28,25 @@ to be process.}
 
 \item{niter}{a positive \code{integer} or \code{numeric}, the
 number of iterations. Non-integer values of
-\code{nbrIterations} will be casted to \code{integer} and truncated towards
+\code{nbrIterations} will be cast to \code{integer} and truncated towards
 zero.}
 
-\item{lambda}{a positive \code{numeric}, the theorical mean
+\item{kmax}{a positive \code{integer} or \code{numeric}, the maximum number
+of degrees of freedom per region. Non-integer values
+of \code{kmax} will be cast to \code{integer} and truncated towards zero.}
+
+\item{lambda}{a positive \code{numeric}, the theoretical mean
 of the Poisson distribution. Default: 3.}
 
+\item{ecartmin}{a \code{numeric}, the minimum distance between two
+nucleosomes.}
+
+\item{ecartmax}{a \code{numeric}, the maximum distance between two
+nucleosomes.}
+
 \item{minReads}{a positive \code{integer} or \code{numeric}, the minimum
-number of reads in a potential canditate region. Non-integer values
-of \code{minReads} will be casted to \code{integer} and truncated towards
+number of reads in a potential candidate region. Non-integer values
+of \code{minReads} will be cast to \code{integer} and truncated towards
 zero. Default: 5.}
 
 \item{adaptNbrIterations}{a \code{logical} indicating if the number
@@ -50,21 +60,11 @@ is used. Default: -1.}
 the complete output of the c++ rjmcmc() function is created.
 Default : \code{FALSE}.}
 
-\item{kMax}{a positive \code{integer} or \code{numeric}, the maximum number
-of degrees of freedom per region. Non-integer values
-of \code{kMax} will be casted to \code{integer} and truncated towards zero.}
-
-\item{minInterval}{a \code{numeric}, the minimum distance between two
-nucleosomes.}
-
-\item{maxInterval}{a \code{numeric}, the maximum distance between two
-nucleosomes.}
-
-\item{maxLength}{a positive \code{integer} or \code{numeric}, the
-length of each segment.}
+\item{dirOut}{a \code{character} string representing the name of the
+directory that will contain the resulting outputs. Default: \code{"out"}.}
 }
 \value{
-0.
+\code{0} when successful.
 }
 \description{
 Run \code{\link{rjmcmc}} on a segment that is contained
@@ -88,14 +88,15 @@ sampleGRanges <- GRanges(seqnames = syntheticNucleosomeReads$dataIP$chr,
     strand = syntheticNucleosomeReads$dataIP$strand)
 
 # Segmentation of the reads
-seg <- segmentation(sampleGRanges, zeta = 147, delta = 50, maxLength = 1000)
+seg <- segmentation(sampleGRanges, zeta=147, delta=50, maxLength=1000)
 \dontrun{
-dir.create("out")
-dir.create("out/done")
-dir.create("out/results")
+    dir.create("out")
+    dir.create("out/done")
+    dir.create("out/results")
 
-runCHR(p=1, seg=seg, niter=1000, kmax=330,lambda=3,
-            ecartmin=147, ecartmax=297, minReads=5)}
+    runCHR(p=1, seg=seg, niter=1000, kmax=330, lambda=3,
+        ecartmin=147, ecartmax=297, minReads=5)
+}
 
 }
 \author{
