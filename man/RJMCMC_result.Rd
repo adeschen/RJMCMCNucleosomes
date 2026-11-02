@@ -3,20 +3,22 @@
 \docType{data}
 \name{RJMCMC_result}
 \alias{RJMCMC_result}
-\title{Nucleosomes obtained by running RJMCMC function using reads
+\title{Nucleosomes detected by running RJMCMC function using reads
 from reads_demo_02 dataset (for demo purpose).}
-\format{A \code{list} of \code{class} "rjmcmcNucleosomes" containing:
+\format{
+A \code{list} of \code{class} "rjmcmcNucleosomes" containing:
 \itemize{
-\item \code{call} the matched call.
-\item \code{k} a \code{integer}, the final estimation of the number
+    \item \code{call} the matched call.
+    \item \code{k} a \code{integer}, the final estimation of the number
 of nucleosomes. \code{0} when no nucleosome is detected.
-\item \code{mu} a \code{vector} of \code{numeric} of length
+    \item \code{mu} a \code{vector} of \code{numeric} of length
 \code{k}, the positions of the nucleosomes. \code{NA} when no nucleosome is
 detected.
-\item \code{k_max} a \code{integer}, the maximum number of nucleosomes
+    \item \code{k_max} a \code{integer}, the maximum number of nucleosomes
 obtained during the iteration process. \code{NA} when no nucleosome is
 detected.
-}}
+}
+}
 \usage{
 data(RJMCMC_result)
 }
@@ -58,19 +60,19 @@ postResult
 }
 \seealso{
 \itemize{
-    \item \code{\link{rjmcmc}} {for profiling of nucleosome positions}
-    \item \code{\link{rjmcmcCHR}} { for profiling of nucleosome positions
+    \item \code{\link{rjmcmc}} for profiling of nucleosome positions
+    \item \code{\link{rjmcmcCHR}} for profiling of nucleosome positions
     for a large region. The function will take care of spliting and
-    merging.}
-    \item \code{\link{segmentation}} { for spliting a \code{GRanges}
+    merging
+    \item \code{\link{segmentation}} for splitting a \code{GRanges}
     containing reads in a list of smaller segments for
-    the \code{rjmcmc} function.}
-    \item \code{\link{postTreatment}} { for merging closely positioned
-    nucleosomes}
-    \item \code{\link{mergeRDSFiles}} { for merging nucleosome information
-    from selected RDS files.}
-    \item \code{\link{plotNucleosomes}} { for generating a graph containing
-    the nucleosome positions and the read coverage.}
+    the \code{rjmcmc} function
+    \item \code{\link{postTreatment}} for merging closely positioned
+    nucleosomes
+    \item \code{\link{mergeRDSFiles}} for merging nucleosome information
+    from selected RDS files
+    \item \code{\link{plotNucleosomes}} for generating a graph containing
+    the nucleosome positions and the read coverage
 }
 }
 \keyword{datasets}

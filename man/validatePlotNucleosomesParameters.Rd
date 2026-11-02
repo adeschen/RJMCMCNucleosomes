@@ -4,8 +4,14 @@
 \alias{validatePlotNucleosomesParameters}
 \title{Parameters validation for the \code{\link{plotNucleosomes}} function}
 \usage{
-validatePlotNucleosomesParameters(nucleosomePositions, reads, seqName, xlab,
-  ylab, names)
+validatePlotNucleosomesParameters(
+  nucleosomePositions,
+  reads,
+  seqName,
+  xlab,
+  ylab,
+  names
+)
 }
 \arguments{
 \item{nucleosomePositions}{a \code{GRanges} or a \code{GRangesList}

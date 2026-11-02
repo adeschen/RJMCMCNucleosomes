@@ -5,8 +5,18 @@
 \title{Parameters validation for the \code{\link{rjmcmc}}
 function}
 \usage{
-validateRJMCMCParameters(reads, seqName, nbrIterations, kMax, lambda,
-  minInterval, maxInterval, minReads, adaptIterationsToReads, vSeed)
+validateRJMCMCParameters(
+  reads,
+  seqName,
+  nbrIterations,
+  kMax,
+  lambda,
+  minInterval,
+  maxInterval,
+  minReads,
+  adaptIterationsToReads,
+  vSeed
+)
 }
 \arguments{
 \item{reads}{a \code{GRanges} containing all forward

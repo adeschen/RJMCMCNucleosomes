@@ -4,8 +4,20 @@
 \alias{runCHR}
 \title{Run \code{\link{rjmcmc}} on multiples segments and merge results.}
 \usage{
-runCHR(p, seg, niter, kmax, lambda, ecartmin, ecartmax, minReads,
-  adaptNbrIterations, vSeed = -1, saveAsRDS = FALSE, dirOut = "out")
+runCHR(
+  p,
+  seg,
+  niter,
+  kmax,
+  lambda,
+  ecartmin,
+  ecartmax,
+  minReads,
+  adaptNbrIterations,
+  vSeed = -1,
+  saveAsRDS = FALSE,
+  dirOut = "out"
+)
 }
 \arguments{
 \item{p}{a \code{integer}, the position of the segment to treat in a

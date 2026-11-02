@@ -779,7 +779,7 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
     if (!is.null(seqName)) {
         reads <- reads[seqnames(reads) == seqName]
     }else{
-        seqName=as.character(unique(seqnames(reads)))
+        seqName <- as.character(unique(seqnames(reads)))
     }
     genomeCur <- as.character(genome(reads)[which(names(genome(reads))
                                                     == seqName)])
@@ -801,18 +801,18 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
         rjmcmc_peak <- resultRJMCMC$mu
         nbPeaks <- length(rjmcmc_peak)
         names(rjmcmc_peak) <- rep("RJMCMC", nbPeaks)
-        rjmcmc_peak$name   <- paste0("RJMCMC_", 1:nbPeaks)
+        rjmcmc_peak$name <- paste0("RJMCMC_", seq_len(nbPeaks))
 
         ## Find nucleosomes present in same regions
-        result <- findConsensusPeakRegions(peaks = c(rjmcmc_peak),
-                                        chrInfo = seqinfo,
-                                        extendingSize = extendingSize,
-                                        expandToFitPeakRegion = FALSE,
-                                        shrinkToFitPeakRegion = FALSE,
-                                        minNbrExp = 1)
+        result <- findConsensusPeakRegions(peaks=c(rjmcmc_peak),
+                                        chrInfo=seqinfo,
+                                        extendingSize=extendingSize,
+                                        expandToFitPeakRegion=FALSE,
+                                        shrinkToFitPeakRegion=FALSE,
+                                        minNbrExp=1)
 
-        overlapsPeak <- findOverlaps(query = result$consensusRanges,
-                                    subject =  rjmcmc_peak)
+        overlapsPeak <- findOverlaps(query=result$consensusRanges,
+                                    subject=rjmcmc_peak)
 
         allOverlap <- queryHits(overlapsPeak)
         uniqueOverlap <- unique(allOverlap)

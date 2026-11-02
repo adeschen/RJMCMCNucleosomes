@@ -1,11 +1,15 @@
 #' RJMCMCNucleosomes: Bayesian hierarchical model for genome-wide
 #' nucleosome positioning with high-throughput short-read data (MNase-Seq)
 #'
-#' This package does nucleosome positioning using informative
-#' Multinomial-Dirichlet prior in a t-mixture with reversible jump
-#' estimation of nucleosome positions for genome-wide profiling.
-#'
-#' @docType package
+#' This package detects nucleosome positions genome-wide from
+#' paired-end or single-end MNase-Seq reads using a Bayesian hierarchical
+#' model. Read positions are modelled as a mixture of Student's
+#' t-distributions with an informative Multinomial-Dirichlet prior on
+#' nucleosome locations, and the number of nucleosomes is estimated with a
+#' reversible jump Markov chain Monte Carlo (RJMCMC) algorithm. Functions are
+#' provided to split chromosomes into segments for parallel analysis, merge
+#' and post-process the predictions, and plot nucleosome positions alongside
+#' read coverage.
 #'
 #' @name RJMCMCNucleosomes-package
 #'
@@ -23,26 +27,27 @@
 #'
 #' @seealso
 #' \itemize{
-#'     \item \code{\link{rjmcmc}} { for profiling of nucleosome positions for a
-#'     segment}
-#'     \item \code{\link{rjmcmcCHR}} { for profiling of nucleosome positions
+#'     \item \code{\link{rjmcmc}} for profiling of nucleosome positions for a
+#'     segment
+#'     \item \code{\link{rjmcmcCHR}} for profiling of nucleosome positions
 #'     for a large region. The function will take care of spliting and
-#'     merging.}
-#'     \item \code{\link{segmentation}} { for spliting a \code{GRanges}
+#'     merging
+#'     \item \code{\link{segmentation}} for splitting a \code{GRanges}
 #'     containing reads in a list of smaller segments for
-#'     the \code{rjmcmc} function.}
-#'     \item \code{\link{postTreatment}} { for merging closely positioned
-#'     nucleosomes}
-#'     \item \code{\link{mergeRDSFiles}} { for merging nucleosome information
-#'     from selected RDS files.}
-#'     \item \code{\link{plotNucleosomes}} { for generating a graph containing
-#'     the nucleosome positions and the read coverage.}
+#'     the \code{rjmcmc} function
+#'     \item \code{\link{postTreatment}} for merging closely positioned
+#'     nucleosomes
+#'     \item \code{\link{mergeRDSFiles}} for merging nucleosome information
+#'     from selected RDS files
+#'     \item \code{\link{plotNucleosomes}} for generating a graph containing
+#'     the nucleosome positions and the read coverage
 #' }
 #'
 #' @importFrom Rcpp evalCpp
-#' @useDynLib RJMCMCNucleosomes
+#' @useDynLib RJMCMCNucleosomes, .registration = TRUE
 #' @keywords package
-NULL
+"_PACKAGE"
+
 
 #' Forward reads and reverse reads in \code{GRanges} format
 #' (for demo purpose).
@@ -62,7 +67,7 @@ NULL
 #'
 #' @seealso
 #' \itemize{
-#'     \item \code{\link{rjmcmc}} {for profiling of nucleosome positions}
+#'     \item \code{\link{rjmcmc}} for profiling of nucleosome positions
 #' }
 #'
 #' @usage data(reads_demo_01)
@@ -98,19 +103,19 @@ NULL
 #'
 #' @seealso
 #' \itemize{
-#'     \item \code{\link{rjmcmc}} {for profiling of nucleosome positions}
-#'     \item \code{\link{rjmcmcCHR}} { for profiling of nucleosome positions
+#'     \item \code{\link{rjmcmc}} for profiling of nucleosome positions
+#'     \item \code{\link{rjmcmcCHR}} for profiling of nucleosome positions
 #'     for a large region. The function will take care of spliting and
-#'     merging.}
-#'     \item \code{\link{segmentation}} { for spliting a \code{GRanges}
+#'     merging
+#'     \item \code{\link{segmentation}} for splitting a \code{GRanges}
 #'     containing reads in a list of smaller segments for
-#'     the \code{rjmcmc} function.}
-#'     \item \code{\link{postTreatment}} { for merging closely positioned
-#'     nucleosomes}
-#'     \item \code{\link{mergeRDSFiles}} { for merging nucleosome information
-#'     from selected RDS files.}
-#'     \item \code{\link{plotNucleosomes}} { for generating a graph containing
-#'     the nucleosome positions and the read coverage.}
+#'     the \code{rjmcmc} function
+#'     \item \code{\link{postTreatment}} for merging closely positioned
+#'     nucleosomes
+#'     \item \code{\link{mergeRDSFiles}} for merging nucleosome information
+#'     from selected RDS files
+#'     \item \code{\link{plotNucleosomes}} for generating a graph containing
+#'     the nucleosome positions and the read coverage
 #' }
 #'
 #' @usage data(reads_demo_02)
@@ -130,7 +135,8 @@ NULL
 #'
 NULL
 
-#' Nucleosomes obtained by running RJMCMC function using reads
+
+#' Nucleosomes detected by running RJMCMC function using reads
 #' from reads_demo_02 dataset (for demo purpose).
 #'
 #' A \code{list} of \code{class}
@@ -145,13 +151,13 @@ NULL
 #'
 #' @format A \code{list} of \code{class} "rjmcmcNucleosomes" containing:
 #' \itemize{
-#' \item \code{call} the matched call.
-#' \item \code{k} a \code{integer}, the final estimation of the number
+#'     \item \code{call} the matched call.
+#'     \item \code{k} a \code{integer}, the final estimation of the number
 #' of nucleosomes. \code{0} when no nucleosome is detected.
-#' \item \code{mu} a \code{vector} of \code{numeric} of length
+#'     \item \code{mu} a \code{vector} of \code{numeric} of length
 #' \code{k}, the positions of the nucleosomes. \code{NA} when no nucleosome is
 #' detected.
-#' \item \code{k_max} a \code{integer}, the maximum number of nucleosomes
+#'     \item \code{k_max} a \code{integer}, the maximum number of nucleosomes
 #' obtained during the iteration process. \code{NA} when no nucleosome is
 #' detected.
 #' }
@@ -171,23 +177,22 @@ NULL
 #'
 #' @seealso
 #' \itemize{
-#'     \item \code{\link{rjmcmc}} {for profiling of nucleosome positions}
-#'     \item \code{\link{rjmcmcCHR}} { for profiling of nucleosome positions
+#'     \item \code{\link{rjmcmc}} for profiling of nucleosome positions
+#'     \item \code{\link{rjmcmcCHR}} for profiling of nucleosome positions
 #'     for a large region. The function will take care of spliting and
-#'     merging.}
-#'     \item \code{\link{segmentation}} { for spliting a \code{GRanges}
+#'     merging
+#'     \item \code{\link{segmentation}} for splitting a \code{GRanges}
 #'     containing reads in a list of smaller segments for
-#'     the \code{rjmcmc} function.}
-#'     \item \code{\link{postTreatment}} { for merging closely positioned
-#'     nucleosomes}
-#'     \item \code{\link{mergeRDSFiles}} { for merging nucleosome information
-#'     from selected RDS files.}
-#'     \item \code{\link{plotNucleosomes}} { for generating a graph containing
-#'     the nucleosome positions and the read coverage.}
+#'     the \code{rjmcmc} function
+#'     \item \code{\link{postTreatment}} for merging closely positioned
+#'     nucleosomes
+#'     \item \code{\link{mergeRDSFiles}} for merging nucleosome information
+#'     from selected RDS files
+#'     \item \code{\link{plotNucleosomes}} for generating a graph containing
+#'     the nucleosome positions and the read coverage
 #' }
 #'
 #' @usage data(RJMCMC_result)
-#' @docType data
 #' @keywords datasets
 #'
 #' @examples

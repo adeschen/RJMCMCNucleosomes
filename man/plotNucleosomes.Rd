@@ -4,8 +4,14 @@
 \alias{plotNucleosomes}
 \title{Generate a graph of nucleosome positions with read coverage}
 \usage{
-plotNucleosomes(nucleosomePositions, reads, seqName = NULL,
-  xlab = "position", ylab = "coverage", names = NULL)
+plotNucleosomes(
+  nucleosomePositions,
+  reads,
+  seqName = NULL,
+  xlab = "position",
+  ylab = "coverage",
+  names = NULL
+)
 }
 \arguments{
 \item{nucleosomePositions}{a \code{GRanges} or a \code{GRangesList}

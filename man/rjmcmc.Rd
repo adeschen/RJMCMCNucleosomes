@@ -4,9 +4,19 @@
 \alias{rjmcmc}
 \title{Nucleosome positioning mapping on a segment}
 \usage{
-rjmcmc(reads, seqName = NULL, nbrIterations, kMax, lambda = 3, minInterval,
-  maxInterval, minReads = 5, adaptIterationsToReads = TRUE, vSeed = -1,
-  saveAsRDS = FALSE)
+rjmcmc(
+  reads,
+  seqName = NULL,
+  nbrIterations,
+  kMax,
+  lambda = 3,
+  minInterval,
+  maxInterval,
+  minReads = 5,
+  adaptIterationsToReads = TRUE,
+  vSeed = -1,
+  saveAsRDS = FALSE
+)
 }
 \arguments{
 \item{reads}{a \code{GRanges} containing forward and

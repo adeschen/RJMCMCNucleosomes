@@ -5,8 +5,13 @@
 \title{A post-treatment function to merge closely positioned nucleosomes,
 from the same chromosome, identified by the \code{\link{rjmcmc}} function.}
 \usage{
-postTreatment(reads, seqName = NULL, resultRJMCMC, extendingSize = 74L,
-  chrLength)
+postTreatment(
+  reads,
+  seqName = NULL,
+  resultRJMCMC,
+  extendingSize = 74L,
+  chrLength
+)
 }
 \arguments{
 \item{reads}{a \code{GRanges} containing forward and

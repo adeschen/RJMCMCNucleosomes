@@ -4,10 +4,25 @@
 \alias{rjmcmcCHR}
 \title{Nucleosome positioning mapping on a large segment, up to a chromosome}
 \usage{
-rjmcmcCHR(reads, seqName = NULL, zeta = 147, delta, maxLength,
-  nbrIterations, kMax, lambda = 3, minInterval, maxInterval, minReads = 5,
-  adaptIterationsToReads = TRUE, vSeed = -1, nbCores = 1,
-  dirOut = "out", saveAsRDS = FALSE, saveSEG = TRUE)
+rjmcmcCHR(
+  reads,
+  seqName = NULL,
+  zeta = 147,
+  delta,
+  maxLength,
+  nbrIterations,
+  kMax,
+  lambda = 3,
+  minInterval,
+  maxInterval,
+  minReads = 5,
+  adaptIterationsToReads = TRUE,
+  vSeed = -1,
+  nbCores = 1,
+  dirOut = "out",
+  saveAsRDS = FALSE,
+  saveSEG = TRUE
+)
 }
 \arguments{
 \item{reads}{a \code{GRanges}, the forward and reverse

@@ -4,9 +4,18 @@
 \alias{rjmcmcNucleo}
 \title{Interface for the RJMCMC nucleosome mapping method in C++}
 \usage{
-rjmcmcNucleo(startPosForwardReads, startPosReverseReads, nbrIterations, kMax,
-  lambda, minInterval, maxInterval, minReads = 5L,
-  adaptIterationsToReads = TRUE, vSeed = -1)
+rjmcmcNucleo(
+  startPosForwardReads,
+  startPosReverseReads,
+  nbrIterations,
+  kMax,
+  lambda,
+  minInterval,
+  maxInterval,
+  minReads = 5L,
+  adaptIterationsToReads = TRUE,
+  vSeed = -1
+)
 }
 \arguments{
 \item{startPosForwardReads}{a \code{vector} of \code{numeric}, the

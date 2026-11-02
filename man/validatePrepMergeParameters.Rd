@@ -4,8 +4,13 @@
 \alias{validatePrepMergeParameters}
 \title{Parameters validation for the \code{\link{postMerge}} function}
 \usage{
-validatePrepMergeParameters(reads, seqName, resultRJMCMC, extendingSize,
-  chrLength)
+validatePrepMergeParameters(
+  reads,
+  seqName,
+  resultRJMCMC,
+  extendingSize,
+  chrLength
+)
 }
 \arguments{
 \item{reads}{a \code{GRanges} containing all forward

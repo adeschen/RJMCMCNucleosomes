@@ -10,38 +10,54 @@ export(postTreatment)
 export(rjmcmc)
 export(rjmcmcCHR)
 export(segmentation)
-importFrom(BiocGenerics,end)
-importFrom(BiocGenerics,sapply)
-importFrom(BiocGenerics,start)
-importFrom(BiocParallel,SnowParam)
-importFrom(BiocParallel,bplapply)
-importFrom(GenomicRanges,GRanges)
-importFrom(GenomicRanges,GRangesList)
-importFrom(GenomicRanges,findOverlaps)
-importFrom(GenomicRanges,strand)
-importFrom(IRanges,IRanges)
-importFrom(IRanges,coverage)
+importFrom(BiocGenerics,
+  end,
+  sapply,
+  start
+)
+importFrom(BiocParallel,
+  SnowParam,
+  bplapply
+)
+importFrom(GenomicRanges,
+  GRanges,
+  GRangesList,
+  findOverlaps,
+  strand
+)
+importFrom(IRanges,
+  IRanges,
+  coverage
+)
 importFrom(Rcpp,evalCpp)
-importFrom(S4Vectors,isSingleInteger)
-importFrom(S4Vectors,isSingleNumber)
-importFrom(S4Vectors,queryHits)
-importFrom(S4Vectors,runValue)
-importFrom(S4Vectors,splitAsList)
-importFrom(S4Vectors,subjectHits)
-importFrom(Seqinfo,Seqinfo)
-importFrom(Seqinfo,genome)
-importFrom(Seqinfo,seqinfo)
-importFrom(Seqinfo,seqlevels)
-importFrom(Seqinfo,seqnames)
+importFrom(S4Vectors,
+  isSingleInteger,
+  isSingleNumber,
+  queryHits,
+  runValue,
+  splitAsList,
+  subjectHits
+)
+importFrom(Seqinfo,
+  Seqinfo,
+  genome,
+  seqinfo,
+  seqlevels,
+  seqnames
+)
 importFrom(consensusSeekeR,findConsensusPeakRegions)
 importFrom(grDevices,rainbow)
-importFrom(graphics,abline)
-importFrom(graphics,legend)
-importFrom(graphics,lines)
-importFrom(graphics,plot)
-importFrom(graphics,points)
-importFrom(graphics,polygon)
+importFrom(graphics,
+  abline,
+  legend,
+  lines,
+  plot,
+  points,
+  polygon
+)
 importFrom(methods,is)
-importFrom(stats,aggregate)
-importFrom(stats,setNames)
-useDynLib(RJMCMCNucleosomes)
+importFrom(stats,
+  aggregate,
+  setNames
+)
+useDynLib(RJMCMCNucleosomes, .registration = TRUE)

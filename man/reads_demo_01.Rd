@@ -5,7 +5,9 @@
 \alias{reads_demo_01}
 \title{Forward reads and reverse reads in \code{GRanges} format
 (for demo purpose).}
-\format{A \code{GRanges} containing forward and reverse reads.}
+\format{
+A \code{GRanges} containing forward and reverse reads.
+}
 \usage{
 data(reads_demo_01)
 }
@@ -28,7 +30,7 @@ rjmcmc(reads = reads_demo_01, nbrIterations = 100, lambda = 3, kMax = 30,
 }
 \seealso{
 \itemize{
-    \item \code{\link{rjmcmc}} {for profiling of nucleosome positions}
+    \item \code{\link{rjmcmc}} for profiling of nucleosome positions
 }
 }
 \keyword{datasets}

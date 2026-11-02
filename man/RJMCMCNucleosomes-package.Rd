@@ -13,20 +13,20 @@ estimation of nucleosome positions for genome-wide profiling.
 }
 \seealso{
 \itemize{
-    \item \code{\link{rjmcmc}} { for profiling of nucleosome positions for a
-    segment}
-    \item \code{\link{rjmcmcCHR}} { for profiling of nucleosome positions
+    \item \code{\link{rjmcmc}} for profiling of nucleosome positions for a
+    segment
+    \item \code{\link{rjmcmcCHR}} for profiling of nucleosome positions
     for a large region. The function will take care of spliting and
-    merging.}
-    \item \code{\link{segmentation}} { for spliting a \code{GRanges}
+    merging
+    \item \code{\link{segmentation}} for splitting a \code{GRanges}
     containing reads in a list of smaller segments for
-    the \code{rjmcmc} function.}
-    \item \code{\link{postTreatment}} { for merging closely positioned
-    nucleosomes}
-    \item \code{\link{mergeRDSFiles}} { for merging nucleosome information
-    from selected RDS files.}
-    \item \code{\link{plotNucleosomes}} { for generating a graph containing
-    the nucleosome positions and the read coverage.}
+    the \code{rjmcmc} function
+    \item \code{\link{postTreatment}} for merging closely positioned
+    nucleosomes
+    \item \code{\link{mergeRDSFiles}} for merging nucleosome information
+    from selected RDS files
+    \item \code{\link{plotNucleosomes}} for generating a graph containing
+    the nucleosome positions and the read coverage
 }
 }
 \author{

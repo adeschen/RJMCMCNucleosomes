@@ -148,9 +148,9 @@ rjmcmc <- function(reads, seqName = NULL,
 
     if (is.null(resultRJMCMC)) {
         ## Set values when no nucleosome can be found
-        k = 0
-        mu = NA
-        k_max = NA
+        k <- 0
+        mu <- NA
+        k_max <- NA
     } else {
         # Find k value with the maximum of iterations
         iterPerK <- data.frame(k = resultRJMCMC$k, it = resultRJMCMC$it)
@@ -163,10 +163,10 @@ rjmcmc <- function(reads, seqName = NULL,
             seqName <- seqnames(reads)[1]
         }
         # Set mu as a GRanges
-        mu <- GRanges(seqnames = rep(seqName, k),
-                    ranges = IRanges(start=round(resultRJMCMC$muHat[k,][1:k]),
-                    end=round(resultRJMCMC$muHat[k,][1:k])),
-                    strand = rep('*',k))
+        mu <- GRanges(seqnames=rep(seqName, k),
+                ranges=IRanges(start=round(resultRJMCMC$muHat[k,][seq_len(k)]),
+                end=round(resultRJMCMC$muHat[k,][seq_len(k)])),
+                strand=rep('*',k))
         # Get the k_max value
         k_max <- resultRJMCMC$k_max
     }
@@ -451,7 +451,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
         } else if(!is.null(names)){
             extraNames <- names
         } else {
-            extraNames <- 1:nbrItems
+            extraNames <- seq_len(nbrItems)
         }
     } else {
         nbrItems <-1
@@ -471,7 +471,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
     y_max <- max(coverageSeqName, na.rm = TRUE) + 10
 
     ## Step in between each result, when more than one result
-    step = ceiling(y_max / 80)
+    step <- ceiling(y_max/80)
 
     ## Always set Y axis minimum to zero
     y_min <- -1 - (step * nbrItems)
@@ -486,7 +486,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
 
     # Plot coverage
     coverage <- c(0, as.integer(coverageSeqName), 0)
-    position <- c(0, 1:(length(coverage) - 1))
+    position <- c(0, seq_len(length(coverage) - 1))
     plot(coverageSeqName, type = "l", col = "gray",
             ylim = c(y_min, y_max), xlim = c(x_min, x_max), xlab = xlab,
             ylab = ylab)
@@ -495,8 +495,8 @@ plotNucleosomes <- function(nucleosomePositions, reads,
 
     # Plot nucleosome positions
     if (nbrItems > 1) {
-        for (i in 1:nbrItems) {
-            y_pos = (-(step)) * i
+        for (i in seq_len(nbrItems)) {
+            y_pos <- (-(step)) * i
             nucl <- start(nucleosomePositions[[i]])
             points(nucl, rep(y_pos, length(nucl)), ylim = c(y_min, y_max),
                     xlim = c(x_min, x_max), col = posColors[i], pch = 19)
@@ -561,9 +561,9 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
     posMax <- max(end(reads))
 
     # Create segments
-    starts = seq(posMin, posMax, by = (maxLength - (zeta + delta)))
-    subject = GRanges(seqlevels(reads), IRanges(starts, width=maxLength))
-    hits = findOverlaps(reads, subject)
+    starts <- seq(posMin, posMax, by = (maxLength - (zeta + delta)))
+    subject <- GRanges(seqlevels(reads), IRanges(starts, width=maxLength))
+    hits <- findOverlaps(reads, subject)
     splitAsList(reads[queryHits(hits)], subjectHits(hits))
 }
 
@@ -683,13 +683,13 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' @importFrom BiocParallel bplapply SnowParam
 #' @importFrom GenomicRanges strand
 #' @export
-rjmcmcCHR <- function(reads, seqName = NULL, zeta = 147,
+rjmcmcCHR <- function(reads, seqName=NULL, zeta=147,
                         delta, maxLength,
-                        nbrIterations, kMax, lambda = 3,
-                        minInterval, maxInterval, minReads = 5,
-                        adaptIterationsToReads = TRUE, vSeed = -1,
-                        nbCores = 1, dirOut="out",
-                        saveAsRDS = FALSE, saveSEG = TRUE){
+                        nbrIterations, kMax, lambda=3,
+                        minInterval, maxInterval, minReads=5,
+                        adaptIterationsToReads=TRUE, vSeed=-1,
+                        nbCores=1, dirOut="out",
+                        saveAsRDS=FALSE, saveSEG=TRUE){
 
     if(!dir.exists(dirOut)){
         dir.create(dirOut)
@@ -724,29 +724,29 @@ rjmcmcCHR <- function(reads, seqName = NULL, zeta = 147,
 
     nbSeg <- length(seg)
 
-    param <- SnowParam(workers = nbCores, stop.on.error = TRUE)
+    param <- SnowParam(workers=nbCores, stop.on.error=TRUE)
 
     ## Run RJMCMC on each segment
-    a <- bplapply(1:nbSeg, FUN = runCHR, seg, niter = nbrIterations,
-                    kmax = kMax, lambda = lambda, ecartmin = minInterval,
-                    ecartmax = maxInterval, minReads = minReads,
-                    adaptNbrIterations = adaptIterationsToReads,
-                    dirOut = dirOut,
-                    vSeed = vSeed, saveAsRDS = saveAsRDS, BPPARAM = param)
+    a <- bplapply(seq_len(nbSeg), FUN=runCHR, seg, niter=nbrIterations,
+                    kmax=kMax, lambda = lambda, ecartmin=minInterval,
+                    ecartmax=maxInterval, minReads=minReads,
+                    adaptNbrIterations=adaptIterationsToReads,
+                    dirOut=dirOut,
+                    vSeed=vSeed, saveAsRDS=saveAsRDS, BPPARAM=param)
 
     ## Merge results from all segments
     results <- mergeAllRDSFilesFromDirectory(dirResults)
 
     ## Post-treatment of the nucleosomes
-    resultPostTreatement <- postTreatment(reads = reads,
-                                seqName = seqName, results,
+    resultPostTreatement <- postTreatment(reads=reads,
+                                seqName=seqName, results,
                                 chrLength=max(start(reads), end(reads)) + 1000)
 
     results$muPost <- resultPostTreatement
 
     results$kPost <- length(resultPostTreatement)
 
-    class(results)<-"rjmcmcNucleosomesBeforeAndAfterPostTreatment"
+    class(results) <- "rjmcmcNucleosomesBeforeAndAfterPostTreatment"
 
     return(results)
 }
