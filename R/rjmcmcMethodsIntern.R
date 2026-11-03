@@ -8,7 +8,7 @@
 #'
 #' @param startPosReverseReads a \code{vector} of \code{numeric}, the
 #' start position of all the reverse reads. Beware that the start position of
-#' a reverse read is always higher that the end positition.
+#' a reverse read is always higher than the end position.
 #'
 #' @param nbrIterations a positive \code{integer} or \code{numeric}, the
 #' number of iterations. Non-integer values of
@@ -101,7 +101,7 @@ NULL
 #' @param reads a \code{GRanges} containing all forward
 #' and reverse reads.The start positions of both reads are going to be used
 #' for the analysis. Beware that the start position of
-#' a reverse read is always higher that the end positition.
+#' a reverse read is always higher than the end position.
 #'
 #' @param seqName a \code{character} string containing the label of the
 #' chromosome, present in the \code{GRanges} object, that will be used. The
@@ -383,7 +383,7 @@ validateDirectoryParameters <- function(directory) {
 #' @param reads a \code{GRanges} containing all forward
 #' and reverse reads.The start positions of both reads are going to be used
 #' for the analysis. Beware that the start position of
-#' a reverse read is always higher that the end positition. The \code{GRanges}
+#' a reverse read is always higher than the end position. The \code{GRanges}
 #' should at least contain one read.
 #'
 #' @param seqName a \code{character} string containing the label of the
@@ -396,13 +396,13 @@ validateDirectoryParameters <- function(directory) {
 #'  about nucleosome positioning for an entire chromosome.
 #'
 #' @param extendingSize a positive \code{numeric} or a positive \code{integer}
-#' indicating the size of the consensus region used to group closeley
+#' indicating the size of the consensus region used to group closely
 #' positioned nucleosomes.The minimum size of the consensus region is equal to
 #' twice the value of the \code{extendingSize} parameter. The numeric will
 #' be treated as an integer.
 #'
 #' @param chrLength a positive \code{numeric} or a positive \code{integer}
-#' indicating the lenght of the current chromosome. The length of the
+#' indicating the length of the current chromosome. The length of the
 #' chromosome is used to ensure that the consensus positions are all
 #' located inside the chromosome.
 #'
@@ -717,7 +717,7 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #' @param reads a \code{GRanges} containing all forward
 #' and reverse reads.The start positions of both reads are going to be used
 #' for the analysis. Beware that the start position of
-#' a reverse read is always higher that the end position.
+#' a reverse read is always higher than the end position.
 #'
 #' @param resultRJMCMC an object of class 'rjmcmcNucleosomes' or
 #' 'rjmcmcNucleosomesMerge' containing informations about nucleosomes.

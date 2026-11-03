@@ -10,7 +10,7 @@ start position of all the forward reads.}
 
 \item{startPosReverseReads}{a \code{vector} of \code{numeric}, the
 start position of all the reverse reads. Beware that the start position of
-a reverse read is always higher that the end positition.}
+a reverse read is always higher than the end position.}
 
 \item{nbrIterations}{a positive \code{integer} or \code{numeric}, the
 number of iterations. Non-integer values of

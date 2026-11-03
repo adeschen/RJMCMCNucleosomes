@@ -17,7 +17,7 @@ postTreatment(
 \arguments{
 \item{reads}{a \code{GRanges} containing forward and
 reverse reads. Beware that the start position of
-a reverse read is always higher that the end position.}
+a reverse read is always higher than the end position.}
 
 \item{seqName}{a \code{character} string containing the label of the
 chromosome, present in the \code{GRanges} object, that will be used. The

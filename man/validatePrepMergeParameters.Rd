@@ -17,7 +17,7 @@ validatePrepMergeParameters(
 \item{reads}{a \code{GRanges} containing all forward
 and reverse reads.The start positions of both reads are going to be used
 for the analysis. Beware that the start position of
-a reverse read is always higher that the end positition. The \code{GRanges}
+a reverse read is always higher than the end position. The \code{GRanges}
 should at least contain one read.}
 
 \item{seqName}{a \code{character} string containing the label of the
@@ -30,13 +30,13 @@ present in the \code{GRanges}; the only seqname present will be used.}
  about nucleosome positioning for an entire chromosome.}
 
 \item{extendingSize}{a positive \code{numeric} or a positive \code{integer}
-indicating the size of the consensus region used to group closeley
+indicating the size of the consensus region used to group closely
 positioned nucleosomes.The minimum size of the consensus region is equal to
 twice the value of the \code{extendingSize} parameter. The numeric will
 be treated as an integer.}
 
 \item{chrLength}{a positive \code{numeric} or a positive \code{integer}
-indicating the lenght of the current chromosome. The length of the
+indicating the length of the current chromosome. The length of the
 chromosome is used to ensure that the consensus positions are all
 located inside the chromosome.}
 }
