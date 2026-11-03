@@ -318,7 +318,8 @@ mergeAllRDSFiles <- function(arrayOfFiles) {
 #' ## Testing using a real file
 #' RJMCMCNucleosomes:::validateRDSFilesParameters(file_test)
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
 #' @keywords internal
 #'
 validateRDSFilesParameters <- function(RDSFiles) {
@@ -359,7 +360,8 @@ validateRDSFilesParameters <- function(RDSFiles) {
 #' ## Testing using a real directory
 #' RJMCMCNucleosomes:::validateDirectoryParameters(directory)
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
 #' @keywords internal
 #'
 validateDirectoryParameters <- function(directory) {
@@ -660,14 +662,15 @@ validatePlotNucleosomesParameters <- function(nucleosomePositions,
 #' RJMCMCNucleosomes:::validateSegmentationParameters(reads = sampleGRanges,
 #' zeta = 147, delta = 30, maxLength = 12000)
 #'
-#' ## The function raises an error when at least one paramater is not valid
+#' ## The function raises an error when at least one parameter is not valid
 #' #\dontrun{RJMCMCNucleosomes:::validateSegmentationParameters(
 #' #reads = c(100), zeta = 147, delta = 30, maxLength = 12000)}
 #'
 #' #\dontrun{RJMCMCNucleosomes:::validateSegmentationParameters(
 #' #reads = sampleGRanges, zeta = "hi", delta = 30, maxLength = 12000)}
 #'
-#' @author Astrid Deschenes, Pascal Belleau
+#' @author Astrid Deschênes, Pascal Belleau
+#' @encoding UTF-8
 #' @importFrom S4Vectors isSingleInteger isSingleNumber
 #' @keywords internal
 #'
@@ -945,7 +948,8 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #'         ecartmin=147, ecartmax=297, minReads=5)
 #' }
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @importFrom GenomicRanges strand
 #' @keywords internal
 runCHR <- function(p, seg, niter, kmax, lambda, ecartmin, ecartmax, minReads,
