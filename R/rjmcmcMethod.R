@@ -247,7 +247,7 @@ mergeAllRDSFilesFromDirectory <- function(directory) {
 #' @description Merge nucleosome information present in RDS files into one
 #' object of \code{class} "rjmcmcNucleosomesMerge".
 #'
-#' @param RDSFiles a \code{array}, the
+#' @param RDSFiles a \code{vector}, the
 #' names of all RDS used to merge nucleosome information. The files must
 #' contain R object of \code{class} "rjmcmcNucleosomes" or
 #' "rjmcmcNucleosomesMerge".
