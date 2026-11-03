@@ -150,9 +150,9 @@ plot(sample)
 ## Split the analyzed region into segments
 
 It is suggested, in order to accelerate the learning process, to split the 
-analyzed region into segments to accelerate the analysis. Moreover, 
-it is mandatory to analyze each chromosome separately since the 
-`rjmcmc` function can only analyze one chromosome at a time.
+analyzed region into segments. Moreover, it is mandatory to analyze each 
+chromosome separately since the `rjmcmc` function can only analyze one 
+chromosome at a time.
 
 Region segmentation can be done using the `segmentation` function. Beware
 that the larger the segment (parameter `maxLength`), the higher 
