@@ -18,12 +18,12 @@
 #'
 #' @param nbrIterations a positive \code{integer} or \code{numeric}, the
 #' number of iterations. Non-integer values of
-#' \code{nbrIterations} will be casted to \code{integer} and truncated towards
+#' \code{nbrIterations} will be cast to \code{integer} and truncated towards
 #' zero.
 #'
 #' @param kMax a positive \code{integer} or \code{numeric}, the maximum number
 #' of degrees of freedom per region. Non-integer values
-#' of \code{kMax} will be casted to \code{integer} and truncated towards zero.
+#' of \code{kMax} will be cast to \code{integer} and truncated towards zero.
 #'
 #' @param lambda a positive \code{numeric}, the theoretical mean
 #' of the Poisson distribution. Default: 3.
@@ -640,7 +640,7 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' of cores used to run in parallel. Default: 1.
 #'
 #' @param dirOut a \code{character} string. The name of the directory
-#' where 2 directories are created (if they don't already exists).
+#' where 2 directories are created (if they don't already exist).
 #' The directory "dirOut/results" contents the rjmcmc results for each segment.
 #' The directory "dirOut/done" contents file a log file for each segment in
 #' RData format. If the log file for a segment is in the directory,

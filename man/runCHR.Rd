@@ -74,7 +74,7 @@ in a directory specified by user. A RData log file is created when a
 segment has been run while the result is saved in a RDS file.
 
 If the same output directory is used more than once, the
-\code{\link{rjmcmc}} won't be called for segments that have the à
+\code{\link{rjmcmc}} won't be called for segments that have the
 corresponding RData log file.
 }
 \examples{

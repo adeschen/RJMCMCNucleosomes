@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{postMerge}
 \alias{postMerge}
-\title{A internal post treatment function to merge closely positioned
+\title{An internal post treatment function to merge closely positioned
 nucleosomes, from the same chromosome,
 identified by the \code{\link{rjmcmc}} function}
 \usage{
@@ -47,7 +47,7 @@ nucleosome positions. When no nucleosome is present, \code{NULL} is
 returned.
 }
 \description{
-A internal helper function which merges closely positioned
+An internal helper function which merges closely positioned
 nucleosomes to rectify the over splitting and provide a more conservative
 approach. Beware that each chromosome must be treated separately.
 

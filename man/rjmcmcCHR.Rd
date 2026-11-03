@@ -80,7 +80,7 @@ is used. Default: -1.}
 of cores used to run in parallel. Default: 1.}
 
 \item{dirOut}{a \code{character} string. The name of the directory
-where 2 directories are created (if they don't already exists).
+where 2 directories are created (if they don't already exist).
 The directory "dirOut/results" contents the rjmcmc results for each segment.
 The directory "dirOut/done" contents file a log file for each segment in
 RData format. If the log file for a segment is in the directory,

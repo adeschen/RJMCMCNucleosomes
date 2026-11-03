@@ -51,7 +51,7 @@
 #'     \item nbState a \code{integer}, the number of changes of state.
 #'     \item mu a \code{matrix} of \code{numeric} with \code{k_max} columns
 #' and \code{nbState} row containing, in each row, the \code{mu} values
-#' associated the the state identified by the row number.
+#' associated the state identified by the row number.
 #'     \item muHat a \code{matrix} of \code{numeric} with \code{k_max} columns
 #' and \code{k_max} rows containing, in each row, the mean \code{mu} values
 #' associated the number of nucleosomes detected. The row number
@@ -703,11 +703,11 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
     return(0)
 }
 
-#' @title A internal post treatment function to merge closely positioned
+#' @title An internal post treatment function to merge closely positioned
 #' nucleosomes, from the same chromosome,
 #' identified by the \code{\link{rjmcmc}} function
 #'
-#' @description A internal helper function which merges closely positioned
+#' @description An internal helper function which merges closely positioned
 #' nucleosomes to rectify the over splitting and provide a more conservative
 #' approach. Beware that each chromosome must be treated separately.
 #'
@@ -878,7 +878,7 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #' segment has been run while the result is saved in a RDS file.
 #'
 #' If the same output directory is used more than once, the
-#' \code{\link{rjmcmc}} won't be called for segments that have the à
+#' \code{\link{rjmcmc}} won't be called for segments that have the
 #' corresponding RData log file.
 #'
 #' @param p a \code{integer}, the position of the segment to treat in a

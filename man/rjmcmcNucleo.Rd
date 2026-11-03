@@ -54,7 +54,7 @@ obtained during the iteration process.
     \item nbState a \code{integer}, the number of changes of state.
     \item mu a \code{matrix} of \code{numeric} with \code{k_max} columns
 and \code{nbState} row containing, in each row, the \code{mu} values
-associated the the state identified by the row number.
+associated the state identified by the row number.
     \item muHat a \code{matrix} of \code{numeric} with \code{k_max} columns
 and \code{k_max} rows containing, in each row, the mean \code{mu} values
 associated the number of nucleosomes detected. The row number

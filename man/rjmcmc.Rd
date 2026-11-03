@@ -32,12 +32,12 @@ Default: \code{NULL}.}
 
 \item{nbrIterations}{a positive \code{integer} or \code{numeric}, the
 number of iterations. Non-integer values of
-\code{nbrIterations} will be casted to \code{integer} and truncated towards
+\code{nbrIterations} will be cast to \code{integer} and truncated towards
 zero.}
 
 \item{kMax}{a positive \code{integer} or \code{numeric}, the maximum number
 of degrees of freedom per region. Non-integer values
-of \code{kMax} will be casted to \code{integer} and truncated towards zero.}
+of \code{kMax} will be cast to \code{integer} and truncated towards zero.}
 
 \item{lambda}{a positive \code{numeric}, the theoretical mean
 of the Poisson distribution. Default: 3.}
