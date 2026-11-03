@@ -24,7 +24,7 @@ runCHR(
 \item{p}{a \code{integer}, the position of the segment to treat in a
 \code{list} of \code{GRanges}.}
 
-\item{seg}{a \code{list} a \code{GRanges} containing the segments
+\item{seg}{a \code{list} of \code{GRanges} containing the segments
 to be process.}
 
 \item{niter}{a positive \code{integer} or \code{numeric}, the

@@ -641,8 +641,8 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #'
 #' @param dirOut a \code{character} string. The name of the directory
 #' where 2 directories are created (if they don't already exist).
-#' The directory "dirOut/results" contents the rjmcmc results for each segment.
-#' The directory "dirOut/done" contents file a log file for each segment in
+#' The directory "dirOut/results" contains the rjmcmc results for each segment.
+#' The directory "dirOut/done" contains a log file for each segment in
 #' RData format. If the log file for a segment is in the directory,
 #' the program considers that it has been processed and runs the next
 #' segment. Default: "out".

@@ -42,7 +42,7 @@ of \code{minReads} will be cast to \code{integer} and truncated towards
 zero. Default: 5.}
 }
 \value{
-a \code{array} of \code{numeric}, the updated values of the
+a \code{GRanges} with the updated values of the
 nucleosome positions. When no nucleosome is present, \code{NULL} is
 returned.
 }

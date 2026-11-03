@@ -233,7 +233,7 @@ validateRJMCMCParameters <- function(reads,seqName, nbrIterations,
 #'
 #' @description Merge nucleosome information present in multiple RDS files.
 #'
-#' @param arrayOfFiles a \code{array}, the name of each file that must be
+#' @param arrayOfFiles a \code{vector}, the name of each file that must be
 #' used to merge nucleosome information.
 #'
 #' @return a \code{list} of \code{class} "rjmcmcNucleosomesMerge" containing:
@@ -302,7 +302,7 @@ mergeAllRDSFiles <- function(arrayOfFiles) {
 #' @description Validation of all parameters needed by the public
 #' \code{\link{mergeRDSFiles}} function.
 #'
-#' @param RDSFiles a \code{array}, the names of all RDS used to merge
+#' @param RDSFiles a \code{vector}, the names of all RDS used to merge
 #' nucleosome information. The files must contain R object of \code{class}
 #' "rjmcmcNucleosomes" or "rjmcmcNucleosomesMerge".
 #'
@@ -738,7 +738,7 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero. Default: 5.
 #'
-#' @return a \code{array} of \code{numeric}, the updated values of the
+#' @return a \code{GRanges} with the updated values of the
 #' nucleosome positions. When no nucleosome is present, \code{NULL} is
 #' returned.
 #'
@@ -884,7 +884,7 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #' @param p a \code{integer}, the position of the segment to treat in a
 #' \code{list} of \code{GRanges}.
 #'
-#' @param seg a \code{list} a \code{GRanges} containing the segments
+#' @param seg a \code{list} of \code{GRanges} containing the segments
 #' to be process.
 #'
 #' @param niter a positive \code{integer} or \code{numeric}, the

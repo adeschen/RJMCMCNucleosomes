@@ -8,7 +8,7 @@
 mergeAllRDSFiles(arrayOfFiles)
 }
 \arguments{
-\item{arrayOfFiles}{a \code{array}, the name of each file that must be
+\item{arrayOfFiles}{a \code{vector}, the name of each file that must be
 used to merge nucleosome information.}
 }
 \value{

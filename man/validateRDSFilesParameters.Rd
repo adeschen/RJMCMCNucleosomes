@@ -9,7 +9,7 @@ function}
 validateRDSFilesParameters(RDSFiles)
 }
 \arguments{
-\item{RDSFiles}{a \code{array}, the names of all RDS used to merge
+\item{RDSFiles}{a \code{vector}, the names of all RDS used to merge
 nucleosome information. The files must contain R object of \code{class}
 "rjmcmcNucleosomes" or "rjmcmcNucleosomesMerge".}
 }
