@@ -501,7 +501,8 @@ plotNucleosomes <- function(nucleosomePositions, reads,
     }
 
     # Add legend
-    legend("top", posNames, fill = posColors, bty = "n", horiz = TRUE)
+    legend("bottom", posNames, fill = posColors, bty = "n", horiz = TRUE,
+            inset = c(0, 1), xpd = TRUE, text.width = NA)
 }
 
 

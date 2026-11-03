@@ -563,3 +563,28 @@ test.plotNucleosomes_GRangesList_one_element <- function() {
 
     checkEquals(length(obs$text$x), 2, msg=message)
 }
+
+## The legend is placed above the plot and fits within the figure
+test.plotNucleosomes_legend_inside_figure <- function() {
+    pdf(NULL, width=7, height=7)
+    on.exit(dev.off())
+
+    positions <- GRangesList(Sample=RJMCMC_result$mu,
+                    BeforePostTreatment=RJMCMC_result$mu,
+                    AfterPostTreatment=RJMCMC_result$mu)
+
+    obs <- plotNucleosomes(nucleosomePositions=positions,
+                reads=reads_demo_02,
+                names=c("Sample", "RJMCMC", "After Post-Treatment"))
+
+    usr <- par("usr")
+    figLeft <- grconvertX(0, from="nfc", to="user")
+    figRight <- grconvertX(1, from="nfc", to="user")
+
+    message <- paste0(" test.plotNucleosomes_legend_inside_figure() ",
+                    "- plotNucleosomes() legend is not inside the figure.")
+
+    checkTrue(obs$rect$top - obs$rect$h >= usr[4], msg=message)
+    checkTrue(obs$rect$left >= figLeft, msg=message)
+    checkTrue(obs$rect$left + obs$rect$w <= figRight, msg=message)
+}
