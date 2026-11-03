@@ -251,9 +251,9 @@ The `postTreatment` function can significantly reduce the number of
 nucleosomes by merging closely positioned nucleosomes.
 
 
-## Visualisation of the predicted nucleosomes
+## Visualization of the predicted nucleosomes
 
-Visualisation of the predicted nucleosomes, with its associated read coverage, 
+Visualization of the predicted nucleosomes, with its associated read coverage, 
 is available in the **RJMCMCNucleosomes** package.
 
 The `plotNucleosomes` function needs the nucleosome positions and the reads, 
