@@ -327,9 +327,9 @@ result
 
 <br />
 
-When the `saveAsRDS` parameter is set to `TRUE`, the segments created
-during the segmentation step are saved in RDS files. To save the results for
-each segment, the `saveRDS` parameter has to be set to `TRUE`.
+When the `saveAsRDS` parameter is set to `TRUE`, the complete output of the 
+function is saved in a RDS file. To save the results for
+each segment, the `saveSEG` parameter has to be set to `TRUE` (default).
 
 <br />
 
