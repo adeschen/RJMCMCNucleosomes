@@ -23,7 +23,7 @@ read coverage.
     \item \code{\link{rjmcmc}} for profiling of nucleosome positions for a
     segment
     \item \code{\link{rjmcmcCHR}} for profiling of nucleosome positions
-    for a large region. The function will take care of spliting and
+    for a large region. The function will take care of splitting and
     merging
     \item \code{\link{segmentation}} for splitting a \code{GRanges}
     containing reads in a list of smaller segments for
