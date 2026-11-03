@@ -212,13 +212,13 @@ resultsAllMerged
 
 ## Post-process predictions
 
-In some cases the RJMCMC method tends to over split the distribution of reads 
+In some cases the RJMCMC method tends to over-split the distribution of reads 
 for a single nucleosome. Although this characteristic increases the number 
 of false positives, it is still beneficial for the regions rich in 
 nucleosomes.
 
 A function, that merges closely positioned nucleosomes, has been implemented 
-to rectify the over splitting and provide more conservative results.
+to rectify the over-splitting and provide more conservative results.
 
 The `postTreatment` function must be run on the entire analyzed region to
 be efficient. __It should not be run on segmented results__. The function 
