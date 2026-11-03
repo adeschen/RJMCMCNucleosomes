@@ -28,7 +28,7 @@ Authors@R: c(person("Pascal", "Belleau",
     person("Arnaud", "Droit",
     email="arnaud.droit@crchuq.ulaval.ca", role=c("aut")))
 Depends:
-    R (>= 3.5),
+    R (>= 4.5.0),
     IRanges,
     GenomicRanges
 Imports:
