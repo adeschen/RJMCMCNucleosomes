@@ -70,7 +70,7 @@ test.validatePrepMergeParameters_reads_not_GRanges <- function() {
     checkEquals(obs, exp, msg = message)
 }
 
-## Test the result when seqName is NULL with GRanges with multiples chromosomes
+## Test the result when seqName is NULL with GRanges with multiple chromosomes
 test.validatePrepMergeParameters_seqName_NULL_GRanges_complex <- function() {
     reads <- GRanges(seqnames = Rle(c("chr1", "chr2"), c(8,2)),
                      ranges = IRanges(101:110, end = 111:120,
@@ -492,7 +492,7 @@ test.validateRJMCMCParameters_reads_empty <- function() {
     checkEquals(obs, exp, msg = message)
 }
 
-## Test the result when seqName is NULL with GRanges with multiples chromosomes
+## Test the result when seqName is NULL with GRanges with multiple chromosomes
 test.validateRJMCMCParameters_seqName_NULL_GRanges_complex <- function() {
     reads <- GRanges(seqnames = Rle(c("chr1", "chr2"), c(8,2)),
                      ranges = IRanges(101:110, end = 111:120,

@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{runCHR}
 \alias{runCHR}
-\title{Run \code{\link{rjmcmc}} on multiples segments and merge results.}
+\title{Run \code{\link{rjmcmc}} on multiple segments and merge results.}
 \usage{
 runCHR(
   p,

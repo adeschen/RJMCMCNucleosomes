@@ -17,9 +17,9 @@ validatePlotNucleosomesParameters(
 \arguments{
 \item{nucleosomePositions}{a \code{GRanges} or a \code{GRangesList}
 containing the nucleosome positions for one or
-multiples predictions obtained using the same reads. In presence of
-only one prediction (with multiples nucleosome positions), a \code{GRanges}
-is used. In presence of more thant one predictions (as example, before and
+multiple predictions obtained using the same reads. In presence of
+only one prediction (with multiple nucleosome positions), a \code{GRanges}
+is used. In presence of more than one predictions (as example, before and
 after post-treatment or results from different software), a
 \code{GRangesList} with one entry per prediction is used.}
 
