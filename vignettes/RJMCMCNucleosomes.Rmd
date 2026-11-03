@@ -18,6 +18,8 @@ vignette: >
 **Compiled date**: `r Sys.Date()`<br />
 **License**: `r packageDescription("RJMCMCNucleosomes")[["License"]]`<br />
 
+<br />
+
 # Licensing and citing
 
 The **RJMCMCNucleosomes** package and the underlying **RJMCMCNucleosomes** code 
@@ -59,6 +61,8 @@ reversible jump Markov chain Monte Carlo (RJMCMC) simulation technique
 Detailed information about the model can be found in the article 
 mentioned in the citing section.
 
+<br />
+
 # Loading the RJMCMC package
 
 As with any R package, the **RJMCMCNucleosomes** package should first be loaded 
@@ -68,6 +72,7 @@ with the following command:
 library(RJMCMCNucleosomes)
 ```
 
+<br />
 
 # RJMCMCNucleosomes analysis
 
@@ -240,6 +245,8 @@ resultsPostTreatment <- postTreatment(reads = reads,
 length(resultsPostTreatment)
 ```
 
+<br />
+
 The `postTreatment` function can significantly reduce the number of 
 nucleosomes by merging closely positioned nucleosomes.
 
@@ -284,6 +291,8 @@ plotNucleosomes(nucleosomePositions = resultsBeforeAndAfter, reads = reads,
                     names=c("Sample", "RJMCMC", "After Post-Treatment"))
 ```
 
+<br />
+
 # RJMCMCNucleosomes analysis of one chromosome in one step
 
 The `rjmcmcCHR` can analyse an entire chromosome by automatically 
@@ -319,10 +328,25 @@ result <- rjmcmcCHR(reads = sampleGRanges,
 
 result
 ```
+
+<br />
+
 When the `saveSEG` parameter is set to `TRUE`, the segments created
 during the segmentation step are saved in RDS files. To save the results for
 each segment, the `saveRDS` parameter has to be set to `TRUE`.
 
+<br />
+
+# Acknowledgement
+
+Maintenance work for this version of the package (Bioconductor coding
+compliance with `BiocCheck`, native routine registration for the C++ code,
+unit tests and continuous integration with GitHub Actions) was carried out
+with assistance from Claude (Claude Opus 5.5, Anthropic), used through
+Claude Code. All changes were reviewed, tested and committed by the
+package maintainer, who remains responsible for the package content.
+
+<br />
 
 # Session info
 
@@ -333,5 +357,6 @@ compiled:
 sessionInfo()
 ```
 
+<br />
 
 # References
