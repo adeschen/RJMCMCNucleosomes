@@ -23,7 +23,7 @@ for the analysis. Beware that the start position of
 a reverse read is always higher than the end position.}
 
 \item{resultRJMCMC}{an object of class 'rjmcmcNucleosomes' or
-'rjmcmcNucleosomesMerge' containing informations about nucleosomes.}
+'rjmcmcNucleosomesMerge' containing information about nucleosomes.}
 
 \item{extendingSize}{a positive \code{numeric} or a positive \code{integer}
 indicating the size of the consensus region used to group closely

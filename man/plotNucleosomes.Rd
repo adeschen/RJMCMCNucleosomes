@@ -37,7 +37,7 @@ Default: \code{NULL}.}
 \item{ylab}{a \code{character} string containing the label of the y-axis.}
 
 \item{names}{a \code{vector} of a \code{character} string containing the
-label of each prediction set. The \code{vector} must be the same length of
+label of each prediction set. The \code{vector} must be the same length as
 the \code{nucleosomePositions} \code{list} or 1 in presence of a
 \code{vector}. When \code{NULL}, the name of the elements of the \code{list}
 are used or the string "Nucleosome" for a \code{vector} are used.

@@ -400,7 +400,7 @@ postTreatment <- function(reads, seqName = NULL,
 #' @param ylab a \code{character} string containing the label of the y-axis.
 #'
 #' @param names a \code{vector} of a \code{character} string containing the
-#' label of each prediction set. The \code{vector} must be the same length of
+#' label of each prediction set. The \code{vector} must be the same length as
 #' the \code{nucleosomePositions} \code{list} or 1 in presence of a
 #' \code{vector}. When \code{NULL}, the name of the elements of the \code{list}
 #' are used or the string "Nucleosome" for a \code{vector} are used.
@@ -521,7 +521,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
 #' segments for the \code{rjmcmc} function.
 #'
 #' @description Split a \code{GRanges} of reads (as example, the reads from
-#' a chromosome) in a \code{list} of smaller \code{GRanges} sot that the
+#' a chromosome) in a \code{list} of smaller \code{GRanges} so that the
 #' \code{rjmcmc} function can be run on each segments.
 #'
 #' @param reads a \code{GRanges}, the reads that need to be segmented.
@@ -666,7 +666,7 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' correspond to the \code{seqName} input value. \code{NA} when no nucleosome
 #' is detected.
 #'     \item muPost a \code{GRanges} containing the positions of the
-#' nucleosomes after post-treament and '*' as strand. The \code{seqnames}
+#' nucleosomes after post-treatment and '*' as strand. The \code{seqnames}
 #' of the \code{GRanges} correspond to the \code{seqName} input value.
 #' \code{NA} when no nucleosome is detected.
 #' }

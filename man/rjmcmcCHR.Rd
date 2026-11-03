@@ -107,7 +107,7 @@ post-treatment and '*' as strand. The \code{seqnames} of the \code{GRanges}
 correspond to the \code{seqName} input value. \code{NA} when no nucleosome
 is detected.
     \item muPost a \code{GRanges} containing the positions of the
-nucleosomes after post-treament and '*' as strand. The \code{seqnames}
+nucleosomes after post-treatment and '*' as strand. The \code{seqnames}
 of the \code{GRanges} correspond to the \code{seqName} input value.
 \code{NA} when no nucleosome is detected.
 }

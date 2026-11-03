@@ -51,10 +51,10 @@
 #'     \item nbState a \code{integer}, the number of changes of state.
 #'     \item mu a \code{matrix} of \code{numeric} with \code{k_max} columns
 #' and \code{nbState} row containing, in each row, the \code{mu} values
-#' associated the state identified by the row number.
+#' associated with the state identified by the row number.
 #'     \item muHat a \code{matrix} of \code{numeric} with \code{k_max} columns
 #' and \code{k_max} rows containing, in each row, the mean \code{mu} values
-#' associated the number of nucleosomes detected. The row number
+#' associated with the number of nucleosomes detected. The row number
 #' corresponds to the number of nucleosomes detected.
 #'     \item nbK a \code{vector} of length \code{k_max} containing
 #' \code{integer}, the number of iterations
@@ -245,7 +245,7 @@ validateRJMCMCParameters <- function(reads,seqName, nbrIterations,
 #'
 #' @examples
 #'
-#' ## Loading two files containing nucleosomes informations for two sections of
+#' ## Loading two files containing nucleosomes information for two sections of
 #' ## the same chromosome
 #' file_1 <- dir(system.file("extdata", package = "RJMCMCNucleosomes"),
 #'                 pattern = "RJMCMC_seg_01.RDS",
@@ -255,7 +255,7 @@ validateRJMCMCParameters <- function(reads,seqName, nbrIterations,
 #'                 pattern = "RJMCMC_seg_02.RDS",
 #'                 full.names = TRUE)
 #'
-#' ## Merging nucleosomes informations from the two files
+#' ## Merging nucleosomes information from the two files
 #' result <- RJMCMCNucleosomes:::mergeAllRDSFiles(c(file_1, file_2))
 #'
 #' @importFrom methods is
@@ -720,7 +720,7 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #' a reverse read is always higher than the end position.
 #'
 #' @param resultRJMCMC an object of class 'rjmcmcNucleosomes' or
-#' 'rjmcmcNucleosomesMerge' containing informations about nucleosomes.
+#' 'rjmcmcNucleosomesMerge' containing information about nucleosomes.
 #'
 #' @param extendingSize a positive \code{numeric} or a positive \code{integer}
 #' indicating the size of the consensus region used to group closely

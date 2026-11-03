@@ -24,7 +24,7 @@ Merge nucleosome information present in multiple RDS files.
 }
 \examples{
 
-## Loading two files containing nucleosomes informations for two sections of
+## Loading two files containing nucleosomes information for two sections of
 ## the same chromosome
 file_1 <- dir(system.file("extdata", package = "RJMCMCNucleosomes"),
                 pattern = "RJMCMC_seg_01.RDS",
@@ -34,7 +34,7 @@ file_2 <- dir(system.file("extdata", package = "RJMCMCNucleosomes"),
                 pattern = "RJMCMC_seg_02.RDS",
                 full.names = TRUE)
 
-## Merging nucleosomes informations from the two files
+## Merging nucleosomes information from the two files
 result <- RJMCMCNucleosomes:::mergeAllRDSFiles(c(file_1, file_2))
 
 }

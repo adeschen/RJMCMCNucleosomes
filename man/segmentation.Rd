@@ -26,7 +26,7 @@ a \code{GRangesList} containing all the segments.
 }
 \description{
 Split a \code{GRanges} of reads (as example, the reads from
-a chromosome) in a \code{list} of smaller \code{GRanges} sot that the
+a chromosome) in a \code{list} of smaller \code{GRanges} so that the
 \code{rjmcmc} function can be run on each segments.
 }
 \examples{
