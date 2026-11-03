@@ -1,5 +1,5 @@
 Package: RJMCMCNucleosomes
-Version: 1.37.0
+Version: 1.37.1
 Date: 2025-07-28
 Title: Bayesian hierarchical model for genome-wide nucleosome
     positioning with high-throughput short-read data (MNase-Seq)
