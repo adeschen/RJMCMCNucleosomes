@@ -337,7 +337,7 @@ each segment, the `saveRDS` parameter has to be set to `TRUE`.
 
 <br />
 
-# Acknowledgement
+# Acknowledgements
 
 Maintenance work for this version of the package (Bioconductor coding
 compliance with `BiocCheck`, native routine registration for the C++ code,
