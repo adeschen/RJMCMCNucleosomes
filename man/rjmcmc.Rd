@@ -39,7 +39,7 @@ zero.}
 of degrees of freedom per region. Non-integer values
 of \code{kMax} will be casted to \code{integer} and truncated towards zero.}
 
-\item{lambda}{a positive \code{numeric}, the theorical mean
+\item{lambda}{a positive \code{numeric}, the theoretical mean
 of the Poisson distribution. Default: 3.}
 
 \item{minInterval}{a \code{numeric}, the minimum distance between two
@@ -49,8 +49,8 @@ nucleosomes.}
 nucleosomes.}
 
 \item{minReads}{a positive \code{integer} or \code{numeric}, the minimum
-number of reads in a potential canditate region. Non-integer values
-of \code{minReads} will be casted to \code{integer} and truncated towards
+number of reads in a potential candidate region. Non-integer values
+of \code{minReads} will be cast to \code{integer} and truncated towards
 zero. Default: 5.}
 
 \item{adaptIterationsToReads}{a \code{logical} indicating if the number
@@ -63,7 +63,7 @@ is used. Default: -1.}
 
 \item{saveAsRDS}{a \code{logical}. When \code{TRUE}, a RDS file containing
 the complete output of the c++ rjmcmc() function is created.
-Default : \code{FALSE}.}
+Default: \code{FALSE}.}
 }
 \value{
 a \code{list} of \code{class} "rjmcmcNucleosomes" containing:

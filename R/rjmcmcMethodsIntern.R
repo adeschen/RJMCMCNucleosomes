@@ -12,12 +12,12 @@
 #'
 #' @param nbrIterations a positive \code{integer} or \code{numeric}, the
 #' number of iterations. Non-integer values of
-#' \code{nbrIterations} will be casted to \code{integer} and truncated towards
+#' \code{nbrIterations} will be cast to \code{integer} and truncated towards
 #' zero.
 #'
 #' @param kMax a positive \code{integer} or \code{numeric}, the maximum number
 #' of nucleosomes per region. Non-integer values
-#' of \code{kMax} will be casted to \code{integer} and truncated towards zero.
+#' of \code{kMax} will be cast to \code{integer} and truncated towards zero.
 #'
 #' @param lambda a positive \code{numeric}, the theorical mean
 #' of the Poisson distribution. Default: 3.
@@ -29,8 +29,8 @@
 #' nucleosomes.
 #'
 #' @param minReads a positive \code{integer} or \code{numeric}, the minimum
-#' number of reads in a potential canditate region. Non-integer values
-#' of \code{minReads} will be casted to \code{integer} and truncated towards
+#' number of reads in a potential candidate region. Non-integer values
+#' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero. Default: 5.
 #'
 #' @param adaptIterationsToReads a \code{logical} indicating if the number
@@ -110,14 +110,14 @@ NULL
 #'
 #' @param nbrIterations a positive \code{integer} or \code{numeric}, the
 #' number of iterations. Non-integer values of
-#' \code{nbrIterations} will be casted to \code{integer} and truncated towards
+#' \code{nbrIterations} will be cast to \code{integer} and truncated towards
 #' zero.
 #'
 #' @param kMax a positive \code{integer} or \code{numeric}, the maximum number
 #' of nucleosomes per region. Non-integer values
-#' of \code{kMax} will be casted to \code{integer} and truncated towards zero.
+#' of \code{kMax} will be cast to \code{integer} and truncated towards zero.
 #'
-#' @param lambda a positive \code{numeric}, the theorical mean
+#' @param lambda a positive \code{numeric}, the theoretical mean
 #' of the Poisson distribution.
 #'
 #' @param minInterval a \code{numeric}, the minimum distance between two
@@ -127,8 +127,8 @@ NULL
 #' nucleosomes.
 #'
 #' @param minReads a positive \code{integer} or \code{numeric}, the minimum
-#' number of reads in a potential canditate region. Non-integer values
-#' of \code{minReads} will be casted to \code{integer} and truncated towards
+#' number of reads in a potential candidate region. Non-integer values
+#' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero.
 #'
 #' @param adaptIterationsToReads a \code{logical} indicating if the number
@@ -919,7 +919,7 @@ postMerge <- function(reads, resultRJMCMC, extendingSize,
 #'
 #' @param saveAsRDS a \code{logical}. When \code{TRUE}, a RDS file containing
 #' the complete output of the c++ rjmcmc() function is created.
-#' Default : \code{FALSE}.
+#' Default: \code{FALSE}.
 #'
 #' @param dirOut a \code{character} string representing the name of the
 #' directory that will contain the resulting outputs. Default: \code{"out"}.

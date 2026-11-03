@@ -59,7 +59,7 @@ is used. Default: -1.}
 
 \item{saveAsRDS}{a \code{logical}. When \code{TRUE}, a RDS file containing
 the complete output of the c++ rjmcmc() function is created.
-Default : \code{FALSE}.}
+Default: \code{FALSE}.}
 
 \item{dirOut}{a \code{character} string representing the name of the
 directory that will contain the resulting outputs. Default: \code{"out"}.}

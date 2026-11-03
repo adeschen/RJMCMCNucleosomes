@@ -25,7 +25,7 @@
 #' of degrees of freedom per region. Non-integer values
 #' of \code{kMax} will be casted to \code{integer} and truncated towards zero.
 #'
-#' @param lambda a positive \code{numeric}, the theorical mean
+#' @param lambda a positive \code{numeric}, the theoretical mean
 #' of the Poisson distribution. Default: 3.
 #'
 #' @param minInterval a \code{numeric}, the minimum distance between two
@@ -35,8 +35,8 @@
 #' nucleosomes.
 #'
 #' @param minReads a positive \code{integer} or \code{numeric}, the minimum
-#' number of reads in a potential canditate region. Non-integer values
-#' of \code{minReads} will be casted to \code{integer} and truncated towards
+#' number of reads in a potential candidate region. Non-integer values
+#' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero. Default: 5.
 #'
 #' @param adaptIterationsToReads a \code{logical} indicating if the number
@@ -49,7 +49,7 @@
 #'
 #' @param saveAsRDS a \code{logical}. When \code{TRUE}, a RDS file containing
 #' the complete output of the c++ rjmcmc() function is created.
-#' Default : \code{FALSE}.
+#' Default: \code{FALSE}.
 #'
 #' @return a \code{list} of \code{class} "rjmcmcNucleosomes" containing:
 #' \itemize{
@@ -607,15 +607,15 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #'
 #' @param nbrIterations a positive \code{integer} or \code{numeric}, the
 #' number of iterations. Non-integer values of
-#' \code{nbrIterations} will be casted to \code{integer} and truncated towards
+#' \code{nbrIterations} will be cast to \code{integer} and truncated towards
 #' zero.
 #'
 #' @param kMax a positive \code{integer} or \code{numeric}, the maximum number
 #' of degrees of freedom per region. Non-integer values
-#' of \code{kMax} will be casted to \code{integer} and truncated towards zero.
+#' of \code{kMax} will be cast to \code{integer} and truncated towards zero.
 #'
-#' @param lambda a positive \code{numeric}, the theorical mean
-#' of the Poisson distribution. Default: 3.
+#' @param lambda a positive \code{numeric}, the theoretical mean
+#' of the Poisson distribution. Default: \code{3L}.
 #'
 #' @param minInterval a \code{numeric}, the minimum distance between two
 #' nucleosomes.
@@ -624,8 +624,8 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' nucleosomes.
 #'
 #' @param minReads a positive \code{integer} or \code{numeric}, the minimum
-#' number of reads in a potential canditate region. Non-integer values
-#' of \code{minReads} will be casted to \code{integer} and truncated towards
+#' number of reads in a potential candidate region. Non-integer values
+#' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero. Default: 5.
 #'
 #' @param adaptIterationsToReads a \code{logical} indicating if the number
