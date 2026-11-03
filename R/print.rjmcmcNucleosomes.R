@@ -18,7 +18,8 @@
 #'
 #' print(RJMCMC_result)
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
 #' @export
 print.rjmcmcNucleosomes <- function(x, ...) {
     # Print title before printing the content
