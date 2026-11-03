@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{print.rjmcmcNucleosomesMerge}
 \alias{print.rjmcmcNucleosomesMerge}
-\title{Formated output of predicted nucleosomes}
+\title{Formatted output of predicted nucleosomes}
 \usage{
 \method{print}{rjmcmcNucleosomesMerge}(x, ...)
 }
@@ -17,7 +17,7 @@ function to be printed}
 an object of class \code{mergeAllRDSFilesFromDirectory}
 }
 \description{
-Generated a formated output of a list marked as
+Generates a formatted output of a list marked as
 an \code{rjmcmcNucleosomesMerge} class
 }
 \examples{

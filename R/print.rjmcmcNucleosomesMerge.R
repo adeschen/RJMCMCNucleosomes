@@ -1,6 +1,6 @@
-#' @title Formated output of predicted nucleosomes
+#' @title Formatted output of predicted nucleosomes
 #'
-#' @description Generated a formated output of a list marked as
+#' @description Generates a formatted output of a list marked as
 #' an \code{rjmcmcNucleosomesMerge} class
 #'
 #' @method print rjmcmcNucleosomesMerge
