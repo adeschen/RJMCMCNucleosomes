@@ -63,7 +63,7 @@ mentioned in the citing section.
 
 <br />
 
-# Loading the RJMCMC package
+# Loading the RJMCMCNucleosomes package
 
 As with any R package, the **RJMCMCNucleosomes** package should first be loaded 
 with the following command:
