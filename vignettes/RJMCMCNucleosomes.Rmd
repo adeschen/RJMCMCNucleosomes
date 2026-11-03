@@ -327,9 +327,11 @@ result
 
 <br />
 
-When the `saveAsRDS` parameter is set to `TRUE`, the complete output of the 
-function is saved in a RDS file. To save the results for
-each segment, the `saveSEG` parameter has to be set to `TRUE` (default).
+When the `saveSEG` parameter is set to `TRUE` (default), the segments created 
+during the segmentation step are saved in a RDS file in the `dirOut` 
+directory. When the saveAsRDS parameter is set to `TRUE`, the complete 
+output of the `rjmcmcCHR` function for each segment is saved in a RDS 
+file in the current working directory.
 
 <br />
 
