@@ -519,7 +519,7 @@ validatePrepMergeParameters <- function(reads, seqName, resultRJMCMC,
 #' @param ylab a \code{character} string containing the label of the y-axis.
 #'
 #' @param names a \code{vector} of a \code{character} string containing the
-#' label of each prediction set. The \code{vector} must be the same length of
+#' label of each prediction set. The \code{vector} must be the same length as
 #' the \code{nucleosomePositions} \code{list} or 1 in presence of a
 #' \code{vector}.
 #'

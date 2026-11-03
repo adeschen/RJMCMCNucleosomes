@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{print.rjmcmcNucleosomes}
 \alias{print.rjmcmcNucleosomes}
-\title{Formated output of predicted nucleosomes}
+\title{Formatted output of predicted nucleosomes}
 \usage{
 \method{print}{rjmcmcNucleosomes}(x, ...)
 }
@@ -16,7 +16,7 @@
 An object of class \code{rjmcmcNucleosomes}
 }
 \description{
-Generated a formated output of a list marked as
+Generates a formatted output of a list marked as
 an \code{rjmcmcNucleosomes} class
 }
 \examples{

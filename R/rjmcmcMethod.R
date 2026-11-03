@@ -644,7 +644,7 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' The directory "dirOut/results" contents the rjmcmc results for each segment.
 #' The directory "dirOut/done" contents file a log file for each segment in
 #' RData format. If the log file for a segment is in the directory,
-#' the program considers that it has been processed and run the next
+#' the program considers that it has been processed and runs the next
 #' segment. Default: "out".
 #'
 #' @param saveSEG a \code{logical}. When \code{TRUE}, a RDS file containing
