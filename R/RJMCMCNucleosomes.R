@@ -23,7 +23,7 @@
 #' Arnaud Droit
 #'
 #' Maintainer:
-#' Astrid Deschenes <adeschen@@hotmail.com>
+#' Astrid Deschênes <adeschen@@hotmail.com>
 #'
 #' @seealso
 #' \itemize{
@@ -44,6 +44,7 @@
 #' }
 #'
 #' @importFrom Rcpp evalCpp
+#' @encoding UTF-8
 #' @useDynLib RJMCMCNucleosomes, .registration = TRUE
 #' @keywords package
 "_PACKAGE"

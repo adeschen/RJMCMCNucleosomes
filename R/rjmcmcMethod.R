@@ -86,7 +86,8 @@
 #' ## process
 #' result$k_max
 #'
-#' @author Rawane Samb, Pascal Belleau, Astrid Deschenes
+#' @author Rawane Samb, Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @importFrom stats aggregate
 #' @export
 rjmcmc <- function(reads, seqName = NULL,
@@ -552,7 +553,8 @@ plotNucleosomes <- function(nucleosomePositions, reads,
 #' segmentation(reads = sampleGRanges, zeta = 147, delta = 50,
 #' maxLength = 1000)
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @importFrom Seqinfo seqlevels
 #' @importFrom S4Vectors splitAsList
 #' @export
