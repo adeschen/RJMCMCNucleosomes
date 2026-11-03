@@ -27,7 +27,7 @@ a reverse read is always higher than the end position.}
 
 \item{extendingSize}{a positive \code{numeric} or a positive \code{integer}
 indicating the size of the consensus region used to group closely
-positioned nucleosomes.The minimum size of the consensus region is equal to
+positioned nucleosomes. The minimum size of the consensus region is equal to
 twice the value of the \code{extendingSize} parameter. The numeric will
 be treated as an integer.}
 

@@ -314,7 +314,7 @@ mergeRDSFiles <- function(RDSFiles) {
 #'
 #' @param extendingSize a positive \code{numeric} or a positive \code{integer}
 #' indicating the size of the consensus region used to group closely
-#' positioned nucleosomes.The minimum size of the consensus region is equal to
+#' positioned nucleosomes. The minimum size of the consensus region is equal to
 #' twice the value of the \code{extendingSize} parameter. The numeric will
 #' be treated as an integer. Default: 74.
 #'
@@ -522,7 +522,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
 #'
 #' @description Split a \code{GRanges} of reads (as example, the reads from
 #' a chromosome) in a \code{list} of smaller \code{GRanges} so that the
-#' \code{rjmcmc} function can be run on each segments.
+#' \code{rjmcmc} function can be run on each segment.
 #'
 #' @param reads a \code{GRanges}, the reads that need to be segmented.
 #'
