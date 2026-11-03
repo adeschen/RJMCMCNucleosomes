@@ -346,7 +346,8 @@ mergeRDSFiles <- function(RDSFiles) {
 #' ## After post-treatment
 #' postResult
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @export
 postTreatment <- function(reads, seqName = NULL,
                             resultRJMCMC, extendingSize = 74L, chrLength) {
@@ -422,7 +423,8 @@ postTreatment <- function(reads, seqName = NULL,
 #' plotNucleosomes(nucleosomePositions = result$mu, seqName = "chr_SYNTHETIC",
 #'             reads = reads_demo_01)
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
 #' @importFrom IRanges coverage
 #' @importFrom graphics plot lines abline points legend polygon
 #' @importFrom grDevices rainbow
@@ -681,7 +683,8 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' minInterval = 146, maxInterval = 292, minReads = 5, vSeed = 10113,
 #' nbCores = 2, saveAsRDS = FALSE)}
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @importFrom BiocParallel bplapply SnowParam
 #' @importFrom GenomicRanges strand
 #' @export
