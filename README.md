@@ -1,7 +1,8 @@
 Genome-Wide Nucleosome Positioning using High-Throughput Short-Read Data (MNase-Seq)
 =====================
 
-[![codecov](https://codecov.io/gh/ArnaudDroitLab/RJMCMCNucleosomes/branch/master/graph/badge.svg)](https://codecov.io/gh/ArnaudDroitLab/RJMCMCNucleosomes)
+[![R-CMD-check-bioc](https://github.com/adeschen/RJMCMCNucleosomes/actions/workflows/check-bioc.yaml/badge.svg)](https://github.com/adeschen/RJMCMCNucleosomes/actions/workflows/check-bioc.yaml)
+[![codecov](https://codecov.io/gh/adeschen/RJMCMCNucleosomes/branch/devel/graph/badge.svg)](https://app.codecov.io/gh/adeschen/RJMCMCNucleosomes/tree/devel)
 
 This package uses informative Multinomial-Dirichlet prior in a t-mixture with 
 reversible jump estimation of nucleosome positions for genome-wide profiling.
