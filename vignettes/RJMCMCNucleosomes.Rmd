@@ -186,7 +186,7 @@ resultSegment01
 Once all segments have been analyzed, the predicted nucleosomes can be merged 
 together. Two functions are available to facilitate the merging process:
 
-* *mergeRDSFiles* function: A vector containing the name of all RDS files
+* *mergeRDSFiles* function: A vector containing the names of all RDS files
 to merge is passed to it
 * *mergeAllRDSFilesFromDirectory* function: the name of the directory 
 (relative or absolute path) containing all RDS files to merge is passed to it
