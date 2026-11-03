@@ -228,7 +228,7 @@ The value of `extendingSize` should be kept low (below 20). A larger
 value could cause the possible merge of true nucleosomes. 
 
 ```{r postProcess01, collapse=TRUE, message=FALSE}
-## Split reads from the initial sample data into forward and reverse subsets
+## Create a GRanges with the reads of the initial sample
 reads <- GRanges(sample$dataIP)
 
 ## Number of nucleosomes before the post-treatment
@@ -260,7 +260,7 @@ The `plotNucleosomes` function needs the nucleosome positions and the reads,
 in a `GRanges` format, to create a graph. When reads are used 
 to predict more than one set of nucleosome positions (for example, before and
 after post-treatment or results from different software), the predictions can
-be merged in a `list` so that all predictions can be plotted 
+be merged in a `GRangesList` so that all predictions can be plotted 
 simultaneously.
 
 ```{r visualisation, collapse=TRUE, message=FALSE, fig.height=6.5, fig.width=8}
