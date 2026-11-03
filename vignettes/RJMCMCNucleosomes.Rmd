@@ -257,7 +257,7 @@ Visualization of the predicted nucleosomes, with its associated read coverage,
 is available in the **RJMCMCNucleosomes** package.
 
 The `plotNucleosomes` function needs the nucleosome positions and the reads, 
-in an `GRanges` format, to create a graph. When reads are used 
+in a `GRanges` format, to create a graph. When reads are used 
 to predict more than one set of nucleosome positions (for example, before and
 after post-treatment or results from different software), the predictions can
 be merged in a `list` so that all predictions can be plotted 
@@ -265,7 +265,7 @@ simultaneously.
 
 ```{r visualisation, collapse=TRUE, message=FALSE, fig.height=6.5, fig.width=8}
 ## Extract reads to create a GRanges
-reads <-GRanges(sample$dataIP)
+reads <- GRanges(sample$dataIP)
 
 ## Merge predictions from before post-treatment and after post-treatment in 
 ## a list so that both results will be shown in graph
