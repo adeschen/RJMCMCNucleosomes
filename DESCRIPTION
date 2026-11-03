@@ -11,7 +11,7 @@ Description: This package detects nucleosome positions genome-wide from
     reversible jump Markov chain Monte Carlo (RJMCMC) algorithm. Functions are 
     provided to split chromosomes into segments for parallel analysis, merge 
     and post-process the predictions, and plot nucleosome positions 
-    alongside read coverage. This package implements the method describes in 
+    alongside read coverage. This package implements the method described in 
     Samb et al. 2015 (DOI:10.1515/sagmb-2014-0098).
 Authors@R: c(person("Pascal", "Belleau",
     email="pascal_belleau@hotmail.com", role=c("aut"), 
