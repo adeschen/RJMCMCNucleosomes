@@ -24,7 +24,7 @@ Authors@R: c(person("Pascal", "Belleau",
     person("Khader", "Khadraoui",
     email="Khader.Khadraoui@mat.ulaval.ca", role=c("aut")),
     person("Lajmi", "Lakhal-Chaieb",
-    email="Lajmi.Lakhal@mat.ulaval.ca;", role=c("aut")),
+    email="Lajmi.Lakhal@mat.ulaval.ca", role=c("aut")),
     person("Arnaud", "Droit",
     email="arnaud.droit@crchuq.ulaval.ca", role=c("aut")))
 Depends:
