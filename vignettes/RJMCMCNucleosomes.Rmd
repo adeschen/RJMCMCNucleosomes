@@ -343,7 +343,7 @@ Maintenance work for this version of the package (Bioconductor coding
 compliance with `BiocCheck`, native routine registration for the C++ code, 
 bug fixes, unit tests and continuous integration with GitHub Actions) was 
 carried out with assistance from Claude (Claude Opus 5.5, Anthropic), used 
-through Claude Code. All changes were reviewed, tested and committed by the
+through Claude Code. All changes were reviewed, tested and approved by the
 package maintainer, who remains responsible for the package content.
 
 <br />
