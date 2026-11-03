@@ -38,7 +38,7 @@ Global gene expression patterns are established and maintained by the
 concerted actions of transcription factors (TFs) and the proteins that 
 constitute chromatin. The key structural element of chromatin is the 
 nucleosome, which consists of an octameric histone core wrapped by 146 bps 
-of DNA and connected to its neighbour by approximately 10-80 pbs of linker 
+of DNA and connected to its neighbor by approximately 10-80 pbs of linker 
 DNA [@Polishko2012].
 
 The literature on nucleosome positioning commonly focuses on frequentist 
@@ -78,7 +78,7 @@ library(RJMCMCNucleosomes)
 
 A typical **RJMCMCNucleosomes** analysis consists of the following steps:
 
-1. Segment the analysed region into candidate regions that have sufficient 
+1. Segment the analyzed region into candidate regions that have sufficient 
 aligned reads. The initial region cannot be wider than one chromosome.
 2. Estimate nucleosome positions for each region.
 3. Regroup all regions together. The final region cannot be wider than
@@ -131,7 +131,7 @@ plot(sample)
 
 It is suggested, in order to accelerate the learning process, to split the 
 analyzed region into segments to accelerate the analysis. Moreover, 
-it is mandatory to analyse each chromosome separately since the 
+it is mandatory to analyze each chromosome separately since the 
 `rjmcmc` function can only analyze one chromosome at the time.
 
 Region segmentation can be done using the `segmentation` function. Beware
@@ -295,7 +295,7 @@ plotNucleosomes(nucleosomePositions = resultsBeforeAndAfter, reads = reads,
 
 # RJMCMCNucleosomes analysis of one chromosome in one step
 
-The `rjmcmcCHR` can analyse an entire chromosome by automatically 
+The `rjmcmcCHR` can analyze an entire chromosome by automatically 
 split the reads into segments, run `rjmcmc` on each segment, merge and
 post-process the results. The intermediary steps are conserved in a 
 directory set by the `dirOut` parameter.
