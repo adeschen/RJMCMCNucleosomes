@@ -89,8 +89,8 @@ predictions.
 
 # RJMCMCNucleosomes analysis step by step
 
-A synthetic nucleosome sample containing 100 nucleosomes (80 
-well-positioned + 20 fuzzy) has been created using the 
+A synthetic nucleosome sample containing 50 nucleosomes (40 
+well-positioned + 10 fuzzy) has been created using the 
 Bioconductor package `r Biocpkg("nucleoSim")`. This synthetic sample will be 
 used throughout this analysis.
 
@@ -108,8 +108,8 @@ val.nuc.len   <- 147    ### Distance between nucleosomes
 val.len.var   <- 10     ### Variance associated to the length of the reads
 val.lin.len   <- 20     ### The length of the DNA linker
 val.rnd.seed  <- 100    ### Set seed when result needs to be reproducible
-val.offset    <- 10000  ### The number of bases used to offset 
-                        ### all nucleosomes and reads
+val.offset    <- 10000  ### The number of bases used to offset all 
+                        ### nucleosomes and reads
 
 ## Create sample using a Normal distribution
 sample <- nucleoSim::syntheticNucReadsFromDist(wp.num=val.num,
