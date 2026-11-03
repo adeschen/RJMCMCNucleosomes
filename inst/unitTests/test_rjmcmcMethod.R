@@ -547,3 +547,19 @@ test.plotNucleosomes_GRangesList_good_01 <- function() {
 
     checkEquals(length(obs$text$x), 3, msg=message)
 }
+
+## A GRangesList with a single element gives two legend entries
+test.plotNucleosomes_GRangesList_one_element <- function() {
+    pdf(NULL)
+    on.exit(dev.off())
+
+    positions <- GRangesList(only=RJMCMC_result$mu)
+
+    obs <- plotNucleosomes(nucleosomePositions=positions,
+                reads=reads_demo_01)
+
+    message <- paste0(" test.plotNucleosomes_GRangesList_one_element() ",
+                    "- plotNucleosomes() did not generate expected result.")
+
+    checkEquals(length(obs$text$x), 2, msg=message)
+}

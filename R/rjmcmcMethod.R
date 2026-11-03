@@ -494,7 +494,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
             border = "gray", ylim = c(y_min, y_max), xlim = c(x_min, x_max))
 
     # Plot nucleosome positions
-    if (nbrItems > 1) {
+    if (is(nucleosomePositions, "GRangesList")) {
         for (i in seq_len(nbrItems)) {
             y_pos <- (-(step)) * i
             nucl <- start(nucleosomePositions[[i]])
