@@ -29,7 +29,8 @@
 #' ## or simply
 #' result
 #'
-#' @author Astrid Deschenes
+#' @author Astrid Deschênes
+#' @encoding UTF-8
 #' @export
 print.rjmcmcNucleosomesMerge <- function(x, ...) {
     # Print title before printing the content

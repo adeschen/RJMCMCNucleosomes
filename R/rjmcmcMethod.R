@@ -225,7 +225,8 @@ rjmcmc <- function(reads, seqName = NULL,
 #' class(result)
 #'
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @export
 mergeAllRDSFilesFromDirectory <- function(directory) {
 
@@ -275,7 +276,8 @@ mergeAllRDSFilesFromDirectory <- function(directory) {
 #' class(result)
 #'
 #'
-#' @author Pascal Belleau, Astrid Deschenes
+#' @author Pascal Belleau, Astrid Deschênes
+#' @encoding UTF-8
 #' @export
 mergeRDSFiles <- function(RDSFiles) {
 
