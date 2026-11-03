@@ -116,10 +116,10 @@ of the \code{GRanges} correspond to the \code{seqName} input value.
 Use of a fully Bayesian hierarchical model for chromosome-wide
 profiling of nucleosome positions based on high-throughput short-read
 data (MNase-Seq data). Beware that for a genome-wide profiling, each
-chromosome must be treated separatly. This function is optimized to run
+chromosome must be treated separately. This function is optimized to run
 on an entire chromosome.
 
-The function will process by splittingg the \code{GRanges} of reads
+The function will process by splitting the \code{GRanges} of reads
 (as example, the reads from a chromosome) in a \code{list} of smaller
 \code{GRanges} segments that can be run by the
 \code{rjmcmc} function. All those steps are done automatically.
