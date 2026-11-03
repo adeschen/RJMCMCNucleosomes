@@ -88,9 +88,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
 
-      ## GSL required
-      - name: Install GSL
+      - name: Install GSL (Linux)
+        if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libgsl-dev
+
+      - name: Install GSL (macOS)
+        if: runner.os == 'macOS'
+        run: brew install gsl
 
       ## R is already included in the Bioconductor docker images
       - name: Setup R from r-lib
