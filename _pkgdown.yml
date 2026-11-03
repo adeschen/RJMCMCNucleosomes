@@ -1,0 +1,43 @@
+url: https://adeschen.github.io/RJMCMCNucleosomes/
+
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left: [intro, reference, news]
+    right: [search, bioconductor, github]
+  components:
+    bioconductor:
+      icon: fa-leaf
+      href: https://bioconductor.org/packages/RJMCMCNucleosomes
+      aria-label: Bioconductor
+
+reference:
+- title: Package
+  contents:
+  - RJMCMCNucleosomes-package
+- title: Nucleosome positioning
+  desc: Detect nucleosome positions on a segment or on an entire chromosome.
+  contents:
+  - rjmcmc
+  - rjmcmcCHR
+  - segmentation
+- title: Merging and post-treatment
+  desc: Merge results from segments and merge closely positioned nucleosomes.
+  contents:
+  - mergeRDSFiles
+  - mergeAllRDSFilesFromDirectory
+  - postTreatment
+- title: Visualization
+  contents:
+  - plotNucleosomes
+- title: Printing
+  contents:
+  - starts_with("print.")
+- title: Datasets
+  contents:
+  - reads_demo_01
+  - reads_demo_02
+  - RJMCMC_result
+  - syntheticNucleosomeReads

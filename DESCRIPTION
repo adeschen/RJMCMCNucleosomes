@@ -52,7 +52,8 @@ LinkingTo: Rcpp
 SystemRequirements: Rcpp
 Encoding: UTF-8
 License: Artistic-2.0
-URL: https://github.com/adeschen/RJMCMCNucleosomes
+URL: https://github.com/adeschen/RJMCMCNucleosomes,
+    https://adeschen.github.io/RJMCMCNucleosomes/
 BugReports: https://github.com/adeschen/RJMCMCNucleosomes/issues
 VignetteBuilder: knitr
 biocViews: BiologicalQuestion, ChIPSeq, NucleosomePositioning,
