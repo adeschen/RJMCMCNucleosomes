@@ -170,26 +170,26 @@ validateRJMCMCParameters <- function(reads,seqName, nbrIterations,
 
     ## Validate that the reads is a GRanges class
     if (!is(reads, "GRanges")) {
-        stop(paste0("reads must be a GRanges"))
+        stop("reads must be a GRanges")
     }
 
     if (is.null(seqName) &&
         (length(runValue(seqnames(reads))) > 1)) {
-        stop(paste0("seqName must be the name of one of the chromosomes ",
-                "present in the GRanges"))
+        stop("seqName must be the name of one of the chromosomes ",
+                "present in the GRanges")
     }
 
     if (!is.null(seqName) && !is.character(seqName)) {
-        stop(paste0("seqName must be a character string corresponding to the ",
-                    "name of one of the chromosomes present in the GRanges"))
+        stop("seqName must be a character string corresponding to the ",
+                "name of one of the chromosomes present in the GRanges")
     }
 
     ## When seqName present, it needs to be the name of one of the
     ## chromosomes present in the GRanges
     if (!is.null(seqName) && is.character(seqName) && !(seqName %in%
                             runValue(seqnames(reads)))) {
-        stop(paste0("seqName must be a character string corresponding to the ",
-                    "name of one of the chromosomes present in the GRanges"))
+        stop("seqName must be a character string corresponding to the ",
+                "name of one of the chromosomes present in the GRanges")
     }
 
     ## Validate the nbrIterations parameter
@@ -439,41 +439,40 @@ validatePrepMergeParameters <- function(reads, seqName, resultRJMCMC,
 
     ## Validate that the reads is a GRanges class
     if (!is(reads, "GRanges")) {
-        stop(paste0("reads must be a GRanges"))
+        stop("reads must be a GRanges")
     }
 
     ## Validate that the reads is not empty
     if (length(reads) == 0 ) {
-        stop(paste0("reads must be a non-empty GRanges"))
+        stop("reads must be a non-empty GRanges")
     }
 
     ## Validate that when seqName is NULL, only one seqname
     ## is present in GRanges
-    if (is.null(seqName) &&
-        (length(runValue(seqnames(reads))) > 1)) {
-        stop(paste0("seqName must be the name of one of the chromosomes ",
-                    "present in the GRanges"))
+    if (is.null(seqName) && (length(runValue(seqnames(reads))) > 1)) {
+        stop("seqName must be the name of one of the chromosomes ",
+                "present in the GRanges")
     }
 
     ## Validate that when not NULL, seqName is a string
     if (!is.null(seqName) && !is.character(seqName)) {
-        stop(paste0("seqName must be a character string corresponding to the ",
-                    "name of one of the chromosomes present in the GRanges"))
+        stop("seqName must be a character string corresponding to the ",
+                "name of one of the chromosomes present in the GRanges")
     }
 
     ## When seqName present, it needs to be the name of one of the
     ## chromosomes present in the GRanges
     if (!is.null(seqName) && is.character(seqName) && !(seqName %in%
                 runValue(seqnames(reads)))) {
-        stop(paste0("seqName must be a character string corresponding to the ",
-                    "name of one of the chromosomes present in the GRanges"))
+        stop("seqName must be a character string corresponding to the ",
+                "name of one of the chromosomes present in the GRanges")
     }
 
     ## Validate the resultRJMCMC parameter
     if (!is(resultRJMCMC, "rjmcmcNucleosomesMerge") &&
                 !is(resultRJMCMC, "rjmcmcNucleosomes")) {
-        stop(paste0("resultRJMCMC must be an object of class",
-                    "\'rjmcmcNucleosomes\' or \'rjmcmcNucleosomesMerge\'."))
+        stop("resultRJMCMC must be an object of class",
+                "\'rjmcmcNucleosomes\' or \'rjmcmcNucleosomesMerge\'.")
     }
 
     ## Validate the extendingSize parameter
@@ -569,30 +568,29 @@ validatePlotNucleosomesParameters <- function(nucleosomePositions,
 
     ## Validate that the reads is not empty
     if (length(reads) == 0 ) {
-        stop(paste0("reads must be a non-empty GRanges"))
+        stop("reads must be a non-empty GRanges")
     }
 
     ## Validate that when seqName is NULL, only one seqname
     ## must be present in GRanges
     if (is.null(seqName) &&
         (length(runValue(seqnames(reads))) > 1)) {
-        stop(paste0("seqName must be the name of one of the chromosomes ",
-                    "present in the GRanges when more than one chromosome is ",
-                    "present"))
+        stop("seqName must be the name of one of the chromosomes ",
+            "present in the GRanges when more than one chromosome is present")
     }
 
     ## When seqName present, it needs to be the name of one of the
     ## chromosomes present in the GRanges
     if (!is.null(seqName) && is.character(seqName) && !(seqName %in%
                     runValue(seqnames(reads)))) {
-        stop(paste0("seqName must be a character string corresponding to the ",
-                    "name of one of the chromosomes present in the GRanges"))
+        stop("seqName must be a character string corresponding to the ",
+                "name of one of the chromosomes present in the GRanges")
     }
 
     ## Validate that when not NULL, seqName is a string
     if (!is.null(seqName) && !is.character(seqName)) {
-        stop(paste0("seqName must be a character string corresponding to the ",
-                    "name of one of the chromosomes present in the GRanges"))
+        stop("seqName must be a character string corresponding to the ",
+                "name of one of the chromosomes present in the GRanges")
     }
 
     ## Validate that xlab is a IRanges object
@@ -617,9 +615,9 @@ validatePlotNucleosomesParameters <- function(nucleosomePositions,
             }
         } else {
             if(!(length(names) == length(nucleosomePositions))) {
-                stop(paste0("names must be a vector containing the same ",
+                stop("names must be a vector containing the same ",
                     "number of character string as the number of entries ",
-                    "in nucleosomesPositions list"))
+                    "in nucleosomesPositions list")
             }
         }
     }
