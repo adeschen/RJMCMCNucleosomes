@@ -335,8 +335,10 @@ sampleGRanges <- GRanges(syntheticNucleosomeReads$dataIP)
 seqnames(sampleGRanges)
 
 ## Run RJMCMC on all reads
+## The output directory is a temporary directory
 result <- rjmcmcCHR(reads=sampleGRanges, 
-                seqName="chr_SYNTHETIC", dirOut="testRJMCMCCHR",
+                seqName="chr_SYNTHETIC", 
+                dirOut=file.path(tempdir(), "testRJMCMCCHR"),
                 zeta=147, delta=50, maxLength=1200,
                 nbrIterations=500, lambda=3, kMax=30,
                 minInterval=146, maxInterval=292, minReads=5,
