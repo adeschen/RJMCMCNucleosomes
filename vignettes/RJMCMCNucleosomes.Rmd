@@ -63,6 +63,26 @@ mentioned in the citing section.
 
 <br />
 
+# Installation
+
+To install the latest version of the **RJMCMCNucleosomes** package,
+`r CRANpkg("BiocManager")` must first be installed:
+
+```{r installPackage, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("RJMCMCNucleosomes")
+```
+
+The **RJMCMCNucleosomes** package contains C++ code that uses the GNU
+Scientific Library (GSL). When the package is installed from source, the
+GSL must be available on the system (for example, the `libgsl-dev` package
+on Debian/Ubuntu or `brew install gsl` on macOS). On Windows, the GSL is
+included in Rtools.
+
+<br />
+
 # Loading the RJMCMCNucleosomes package
 
 As with any R package, the **RJMCMCNucleosomes** package should first be loaded 
