@@ -477,13 +477,12 @@ test.rjmcmcCHR_good_02 <- function() {
     tryCatch({
         reads <- GRanges(syntheticNucleosomeReads$dataIP[1:500,])
         seqlevels(reads)<- c(seqlevels(reads), "chr2")
-        seqnames(reads)[400:500]<-Rle(values = "chr2", lengths = c(101))
-        obs <- rjmcmcCHR(reads = reads, seqName = "chr_SYNTHETIC",
-                         zeta = 147, delta = 50, maxLength = 1200,
-                         dirOut = temp_dir,
-                         nbrIterations = 1000, lambda = 3, kMax = 30,
-                         minInterval = 146, maxInterval = 292, minReads = 5,
-                         vSeed = 10113, nbCores = 2, saveAsRDS = FALSE)
+        seqnames(reads)[400:500]<-Rle(values="chr2", lengths=c(101))
+        obs <- rjmcmcCHR(reads=reads, seqName="chr_SYNTHETIC",
+                         zeta=147, delta=50, maxLength=1200, dirOut=temp_dir,
+                         nbrIterations=1000, lambda=3, kMax=30,
+                         minInterval=146, maxInterval=292, minReads=5,
+                         vSeed=10113, nbCores=2, saveAsRDS=FALSE)
         message <- paste0(" test.rjmcmcCHR_good_02() ",
                           "- rjmcmcCHR() did not generated expected result.")
         exp.k <- 2
@@ -494,25 +493,45 @@ test.rjmcmcCHR_good_02 <- function() {
         exp.muPost <- c(1075, 1250)
         exp.muPostStrand <- c('*', '*')
 
-        checkTrue(is.list(obs), ms = message)
-        checkEquals(obs$k, exp.k, ms = message)
-        checkEquals(obs$kPost, exp.kPost, ms = message)
-        checkEquals(start(obs$mu), exp.mu, ms = message)
-        checkEquals(start(obs$muPost), exp.muPost, ms = message)
-        checkEquals(end(obs$mu), exp.mu, ms = message)
-        checkEquals(as.vector(strand(obs$mu)), exp.muStrand, ms = message)
-        checkEquals(start(obs$muPost), exp.muPost, ms = message)
-        checkEquals(end(obs$muPost), exp.muPost, ms = message)
-        checkEquals(as.vector(strand(obs$muPost)), exp.muPostStrand, ms = message)
+        checkTrue(is.list(obs), ms=message)
+        checkEquals(obs$k, exp.k, ms=message)
+        checkEquals(obs$kPost, exp.kPost, ms=message)
+        checkEquals(start(obs$mu), exp.mu, ms=message)
+        checkEquals(start(obs$muPost), exp.muPost, ms=message)
+        checkEquals(end(obs$mu), exp.mu, ms=message)
+        checkEquals(as.vector(strand(obs$mu)), exp.muStrand, ms=message)
+        checkEquals(start(obs$muPost), exp.muPost, ms=message)
+        checkEquals(end(obs$muPost), exp.muPost, ms=message)
+        checkEquals(as.vector(strand(obs$muPost)), exp.muPostStrand, ms=message)
 
     }, finally = {
         if (dir.exists(temp_dir)) {
-            unlink(temp_dir, recursive = TRUE, force = FALSE)
+            unlink(temp_dir, recursive=TRUE, force=FALSE)
         }
     }
     )
     ## Double check
     if (dir.exists(temp_dir)) {
-        unlink(temp_dir, recursive = TRUE, force = FALSE)
+        unlink(temp_dir, recursive=TRUE, force=FALSE)
     }
+}
+
+
+###########################################################
+## plotNucleosomes() function
+###########################################################
+
+## A GRanges gives two legend entries: "Nucleosome" and "Coverage"
+test.plotNucleosomes_GRanges_good_01 <- function() {
+    pdf(NULL)
+    on.exit(dev.off())
+
+    obs <- plotNucleosomes(nucleosomePositions=RJMCMC_result$mu,
+                           reads=reads_demo_01)
+
+    message <- paste0(" test.plotNucleosomes_GRanges_good_01() ",
+                      "- plotNucleosomes() did not generate expected result.")
+
+    checkTrue(is.list(obs), msg=message)
+    checkEquals(length(obs$text$x), 2, msg=message)
 }
