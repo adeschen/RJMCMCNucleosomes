@@ -21,7 +21,7 @@ zero.}
 of nucleosomes per region. Non-integer values
 of \code{kMax} will be cast to \code{integer} and truncated towards zero.}
 
-\item{lambda}{a positive \code{numeric}, the theorical mean
+\item{lambda}{a positive \code{numeric}, the theoretical mean
 of the Poisson distribution. Default: 3.}
 
 \item{minInterval}{a \code{numeric}, the minimum distance between two

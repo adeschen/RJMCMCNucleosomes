@@ -21,7 +21,7 @@ validateRJMCMCParameters(
 }
 \arguments{
 \item{reads}{a \code{GRanges} containing all forward
-and reverse reads.The start positions of both reads are going to be used
+and reverse reads. The start positions of both reads are going to be used
 for the analysis. Beware that the start position of
 a reverse read is always higher than the end position.}
 

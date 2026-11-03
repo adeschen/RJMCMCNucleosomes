@@ -220,7 +220,7 @@ NULL
 #'
 #' A \code{list} of \code{class}
 #' "syntheticNucReads" which contains the information about synthetic reads
-#' related to nucleosomes. The datset has been created using a total of 300
+#' related to nucleosomes. The dataset has been created using a total of 300
 #' well-positioned nucleosomes, 30 fuzzy nucleosomes with variance of reads
 #' following a Normal distribution.
 #'
@@ -232,7 +232,7 @@ NULL
 #'
 #' @format A \code{list} containing:
 #' \itemize{
-#'     \item \code{call} the called that generated the dataset.
+#'     \item \code{call} the call that generated the dataset.
 #'     \item \code{dataIP} a \code{data.frame} with the chromosome name, the
 #'     starting and ending positions and the direction of all forward and
 #'     reverse reads for all well-positioned and fuzzy nucleosomes. Paired-end
@@ -250,7 +250,7 @@ NULL
 #'
 #' @return A \code{list} containing:
 #' \itemize{
-#'     \item \code{call} the called that generated the dataset.
+#'     \item \code{call} the call that generated the dataset.
 #'     \item \code{dataIP} a \code{data.frame} with the chromosome name, the
 #'     starting and ending positions and the direction of all forward and
 #'     reverse reads for all well-positioned and fuzzy nucleosomes. Paired-end
