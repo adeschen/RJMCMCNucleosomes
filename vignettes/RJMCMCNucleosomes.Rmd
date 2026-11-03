@@ -331,7 +331,7 @@ result
 
 <br />
 
-When the `saveSEG` parameter is set to `TRUE`, the segments created
+When the `saveAsRDS` parameter is set to `TRUE`, the segments created
 during the segmentation step are saved in RDS files. To save the results for
 each segment, the `saveRDS` parameter has to be set to `TRUE`.
 
