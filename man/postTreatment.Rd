@@ -17,7 +17,7 @@ postTreatment(
 \arguments{
 \item{reads}{a \code{GRanges} containing forward and
 reverse reads. Beware that the start position of
-a reverse read is always higher that the end positition.}
+a reverse read is always higher that the end position.}
 
 \item{seqName}{a \code{character} string containing the label of the
 chromosome, present in the \code{GRanges} object, that will be used. The
@@ -31,7 +31,7 @@ about nucleosome positioning for an entire chromosome or a region that must
 be treated as one unit.}
 
 \item{extendingSize}{a positive \code{numeric} or a positive \code{integer}
-indicating the size of the consensus region used to group closeley
+indicating the size of the consensus region used to group closely
 positioned nucleosomes.The minimum size of the consensus region is equal to
 twice the value of the \code{extendingSize} parameter. The numeric will
 be treated as an integer. Default: 74.}
@@ -48,7 +48,7 @@ When no nucleosome is present, \code{NULL} is returned.
 \description{
 A helper function which merges closely positioned nucleosomes
 to rectify the over splitting and provide a more conservative approach.
-Beware that each chromosome must be treated separatly.
+Beware that each chromosome must be treated separately.
 }
 \examples{
 

@@ -709,7 +709,7 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #'
 #' @description A internal helper function which merges closely positioned
 #' nucleosomes to rectify the over splitting and provide a more conservative
-#' approach. Beware that each chromosome must be treated separatly.
+#' approach. Beware that each chromosome must be treated separately.
 #'
 #' The function uses the Bioconductor \code{package} \code{consensusSeeker} to
 #' group closely positioned nucleosomes.
@@ -717,25 +717,25 @@ validateSegmentationParameters <- function(reads, zeta = 147, delta,
 #' @param reads a \code{GRanges} containing all forward
 #' and reverse reads.The start positions of both reads are going to be used
 #' for the analysis. Beware that the start position of
-#' a reverse read is always higher that the end positition.
+#' a reverse read is always higher that the end position.
 #'
 #' @param resultRJMCMC an object of class 'rjmcmcNucleosomes' or
 #' 'rjmcmcNucleosomesMerge' containing informations about nucleosomes.
 #'
 #' @param extendingSize a positive \code{numeric} or a positive \code{integer}
-#' indicating the size of the consensus region used to group closeley
+#' indicating the size of the consensus region used to group closely
 #' positioned nucleosomes.The minimum size of the consensus region is equal to
 #' twice the value of the \code{extendingSize} parameter. The numeric will
 #' be treated as an integer.
 #'
 #' @param chrLength a positive \code{numeric} or a positive \code{integer}
-#' indicating the lenght of the current chromosome. The length of the
+#' indicating the length of the current chromosome. The length of the
 #' chromosome is used to ensure that the consensus positions are all
 #' located inside the chromosome.
 #'
 #' @param minReads a positive \code{integer} or \code{numeric}, the minimum
-#' number of reads in a potential canditate region. Non-integer values
-#' of \code{minReads} will be casted to \code{integer} and truncated towards
+#' number of reads in a potential candidate region. Non-integer values
+#' of \code{minReads} will be cast to \code{integer} and truncated towards
 #' zero. Default: 5.
 #'
 #' @return a \code{array} of \code{numeric}, the updated values of the

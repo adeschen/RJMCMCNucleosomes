@@ -22,7 +22,7 @@ rjmcmc(
 \arguments{
 \item{reads}{a \code{GRanges} containing forward and
 reverse reads. Beware that the start position of
-a reverse read is always higher that the end positition.}
+a reverse read is always higher that the end position.}
 
 \item{seqName}{a \code{character} string containing the label of the
 chromosome, present in the \code{GRanges} object, that will be used. The
@@ -84,7 +84,7 @@ detected.
 Use of a fully Bayesian hierarchical model for chromosome-wide
 profiling of nucleosome positions based on high-throughput short-read
 data (MNase-Seq data). Beware that for a genome-wide profiling, each
-chromosome must be treated separatly. This function is optimized to run
+chromosome must be treated separately. This function is optimized to run
 on segments that are smaller sections of the chromosome.
 }
 \examples{
