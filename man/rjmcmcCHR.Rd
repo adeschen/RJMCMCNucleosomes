@@ -101,11 +101,12 @@ a \code{list} of class
 "rjmcmcNucleosomesBeforeAndAfterPostTreatment" containing:
 \itemize{
     \item k a \code{integer}, the number of nucleosomes.
-    \item mu a \code{GRanges} containing the positions of the nucleosomes.
-    \item kPost a \code{integer}, the number of nucleosomes after
-post-treatment and '*' as strand. The \code{seqnames} of the \code{GRanges}
+    \item mu a \code{GRanges} containing the positions of the
+nucleosomes and '*' as strand. The \code{seqnames} of the \code{GRanges}
 correspond to the \code{seqName} input value. \code{NA} when no nucleosome
 is detected.
+    \item kPost a \code{integer}, the number of nucleosomes after
+post-treatment.
     \item muPost a \code{GRanges} containing the positions of the
 nucleosomes after post-treatment and '*' as strand. The \code{seqnames}
 of the \code{GRanges} correspond to the \code{seqName} input value.

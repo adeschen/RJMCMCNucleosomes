@@ -90,26 +90,19 @@
 #' @encoding UTF-8
 #' @importFrom stats aggregate
 #' @export
-rjmcmc <- function(reads, seqName = NULL,
-                    nbrIterations, kMax, lambda = 3,
-                    minInterval, maxInterval, minReads = 5,
-                    adaptIterationsToReads = TRUE, vSeed = -1,
-                    saveAsRDS = FALSE) {
+rjmcmc <- function(reads, seqName=NULL,
+    nbrIterations, kMax, lambda=3, minInterval, maxInterval, minReads=5,
+    adaptIterationsToReads=TRUE, vSeed=-1, saveAsRDS=FALSE) {
 
     # Get call information
     cl <- match.call()
 
     # Parameters validation
-    validateRJMCMCParameters(reads = reads,
-                            seqName = seqName,
-                            nbrIterations = nbrIterations,
-                            kMax = kMax,
-                            lambda = lambda,
-                            minInterval = minInterval,
-                            maxInterval = maxInterval,
-                            minReads = minReads,
-                            adaptIterationsToReads = adaptIterationsToReads,
-                            vSeed = vSeed)
+    validateRJMCMCParameters(reads=reads, seqName=seqName,
+        nbrIterations=nbrIterations, kMax=kMax, lambda=lambda,
+        minInterval=minInterval, maxInterval=maxInterval,
+        minReads=minReads, adaptIterationsToReads=adaptIterationsToReads,
+        vSeed=vSeed)
 
     resultRJMCMC <- NULL
 
@@ -123,7 +116,6 @@ rjmcmc <- function(reads, seqName = NULL,
         if (length(reads) > 0) {
 
             startPosForwardReads <- start(reads[strand(reads) == "+"])
-
             startPosReverseReads <- end(reads[strand(reads) == "-"])
 
             # Find nucleosome positions
@@ -173,12 +165,7 @@ rjmcmc <- function(reads, seqName = NULL,
     }
 
     # Format output
-    result <- list(
-        call = cl,
-        k = k,
-        mu = mu,
-        k_max = k_max
-    )
+    result <- list(call=cl, k=k, mu=mu, k_max=k_max)
 
     class(result)<-"rjmcmcNucleosomes"
 
@@ -517,6 +504,7 @@ plotNucleosomes <- function(nucleosomePositions, reads,
     legend("top", posNames, fill = posColors, bty = "n", horiz = TRUE)
 }
 
+
 #' @title Split a \code{GRanges} containing reads in a list of smaller
 #' segments for the \code{rjmcmc} function.
 #'
@@ -572,6 +560,7 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
     hits <- findOverlaps(reads, subject)
     splitAsList(reads[queryHits(hits)], subjectHits(hits))
 }
+
 
 #' @title Nucleosome positioning mapping on a large segment, up to a chromosome
 #'
@@ -660,11 +649,12 @@ segmentation <- function(reads, zeta = 147, delta, maxLength) {
 #' "rjmcmcNucleosomesBeforeAndAfterPostTreatment" containing:
 #' \itemize{
 #'     \item k a \code{integer}, the number of nucleosomes.
-#'     \item mu a \code{GRanges} containing the positions of the nucleosomes.
-#'     \item kPost a \code{integer}, the number of nucleosomes after
-#' post-treatment and '*' as strand. The \code{seqnames} of the \code{GRanges}
+#'     \item mu a \code{GRanges} containing the positions of the
+#' nucleosomes and '*' as strand. The \code{seqnames} of the \code{GRanges}
 #' correspond to the \code{seqName} input value. \code{NA} when no nucleosome
 #' is detected.
+#'     \item kPost a \code{integer}, the number of nucleosomes after
+#' post-treatment.
 #'     \item muPost a \code{GRanges} containing the positions of the
 #' nucleosomes after post-treatment and '*' as strand. The \code{seqnames}
 #' of the \code{GRanges} correspond to the \code{seqName} input value.
