@@ -193,7 +193,7 @@ to merge is passed to it
 
 Beware that segments from different chromosomes should not be merged together.
 
-The segments of the sample, which has been created sooner, have all been 
+The segments of the sample, which has been created earlier, have all been 
 processed (using 500000 iterations) and saved in RDS files. Those will 
 now be merged together.
 
