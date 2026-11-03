@@ -63,7 +63,7 @@ RJMCMCNucleosomes:::validatePrepMergeParameters(reads = reads_demo_01,
 seqName = "chr_SYNTHETIC", resultRJMCMC = nucleosome_info,
 extendingSize = 74, chrLength = 10000000)
 
-## The function raises an error when at least one paramater is not valid
+## The function raises an error when at least one parameter is not valid
 \dontrun{RJMCMCNucleosomes:::validatePrepMergeParameters(
 reads = c(72400, 72431, 72428, 72429, 72426),
 resultRJMCMC = NA, extendingSize = 74, chrLength = 10000000)}

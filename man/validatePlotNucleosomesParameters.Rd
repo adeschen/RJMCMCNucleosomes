@@ -61,7 +61,7 @@ RJMCMCNucleosomes:::validatePlotNucleosomesParameters(nucleosomePositions =
 RJMCMC_result$mu, reads = reads_demo_01, seqName = "chr_SYNTHETIC",
 xlab = "position", ylab = "coverage", names = c("test"))
 
-## The function raises an error when at least one paramater is not valid
+## The function raises an error when at least one parameter is not valid
 #\dontrun{RJMCMCNucleosomes:::validatePlotNucleosomesParameters(
 #nucleosomePositions = c("hi"), reads = reads,
 #xlab = "position", ylab = "coverage", names = c("test"))}

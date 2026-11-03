@@ -147,13 +147,13 @@ NULL
 #'     ranges = IRanges(101:110, end = 111:120, names = head(letters, 10)),
 #'     strand = Rle(strand(c("-", "+", "-", "+", "-")), c(1, 2, 2, 3, 2)))
 #'
-#' ## The function returns 0 when all paramaters are valid
+#' ## The function returns 0 when all parameters are valid
 #' RJMCMCNucleosomes:::validateRJMCMCParameters(reads = reads,
 #' seqName = "chr1", nbrIterations = 2, kMax = 10, lambda = 1, minReads = 1,
 #' minInterval = 100, maxInterval = 200, adaptIterationsToReads = TRUE,
 #' vSeed = 100)
 #'
-#' ## The function raises an error when at least one paramater is not valid
+#' ## The function raises an error when at least one parameter is not valid
 #' \dontrun{RJMCMCNucleosomes:::validateRJMCMCParameters(
 #' reads = NA, seqName = "chr1",
 #' nbrIterations = 2, kMax = 10, lambda = 1, minReads = 1, minInterval = 100,
@@ -424,7 +424,7 @@ validateDirectoryParameters <- function(directory) {
 #' seqName = "chr_SYNTHETIC", resultRJMCMC = nucleosome_info,
 #' extendingSize = 74, chrLength = 10000000)
 #'
-#' ## The function raises an error when at least one paramater is not valid
+#' ## The function raises an error when at least one parameter is not valid
 #' \dontrun{RJMCMCNucleosomes:::validatePrepMergeParameters(
 #' reads = c(72400, 72431, 72428, 72429, 72426),
 #' resultRJMCMC = NA, extendingSize = 74, chrLength = 10000000)}
@@ -539,7 +539,7 @@ validatePrepMergeParameters <- function(reads, seqName, resultRJMCMC,
 #' RJMCMC_result$mu, reads = reads_demo_01, seqName = "chr_SYNTHETIC",
 #' xlab = "position", ylab = "coverage", names = c("test"))
 #'
-#' ## The function raises an error when at least one paramater is not valid
+#' ## The function raises an error when at least one parameter is not valid
 #' #\dontrun{RJMCMCNucleosomes:::validatePlotNucleosomesParameters(
 #' #nucleosomePositions = c("hi"), reads = reads,
 #' #xlab = "position", ylab = "coverage", names = c("test"))}

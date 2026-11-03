@@ -74,13 +74,13 @@ reads <- GRanges(seqnames = Rle(c("chr1"), c(10)),
     ranges = IRanges(101:110, end = 111:120, names = head(letters, 10)),
     strand = Rle(strand(c("-", "+", "-", "+", "-")), c(1, 2, 2, 3, 2)))
 
-## The function returns 0 when all paramaters are valid
+## The function returns 0 when all parameters are valid
 RJMCMCNucleosomes:::validateRJMCMCParameters(reads = reads,
 seqName = "chr1", nbrIterations = 2, kMax = 10, lambda = 1, minReads = 1,
 minInterval = 100, maxInterval = 200, adaptIterationsToReads = TRUE,
 vSeed = 100)
 
-## The function raises an error when at least one paramater is not valid
+## The function raises an error when at least one parameter is not valid
 \dontrun{RJMCMCNucleosomes:::validateRJMCMCParameters(
 reads = NA, seqName = "chr1",
 nbrIterations = 2, kMax = 10, lambda = 1, minReads = 1, minInterval = 100,
