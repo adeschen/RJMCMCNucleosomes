@@ -301,7 +301,7 @@ segment, merge and post-process the results. The intermediary steps are
 conserved in a directory set by the `dirOut` parameter.
 
 On real chromosome data, the `rjmcmcCHR` can take some time to execute. We
-strongly suggest running it on a multi-core computer and to use a as many 
+strongly suggest running it on a multi-core computer and to use as many 
 available cores as possible by setting the `nbCores` parameter. 
 
 ```{r rjmcmcCHR, collapse=TRUE, message=FALSE, eval=FALSE}
