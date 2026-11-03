@@ -135,7 +135,7 @@ it is mandatory to analyze each chromosome separately since the
 `rjmcmc` function can only analyze one chromosome at a time.
 
 Region segmentation can be done using the `segmentation` function. Beware
-that larger is the size of a segment (parameter `maxLength`), the higher 
+that the larger the segment (parameter `maxLength`), the higher 
 the number of iterations needs to be to reach convergence during the 
 nucleosome prediction step.
 
