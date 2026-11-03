@@ -136,8 +136,8 @@ it is mandatory to analyze each chromosome separately since the
 
 Region segmentation can be done using the `segmentation` function. Beware
 that larger is the size of a segment (parameter `maxLength`), the higher 
-the number of iterations needs to be to reach convergence during nucleosome 
-predictions step.
+the number of iterations needs to be to reach convergence during the 
+nucleosome predictions step.
 
 ```{r segment01, warning=FALSE, collapse=TRUE, message=FALSE} 
 ## Load needed packages
