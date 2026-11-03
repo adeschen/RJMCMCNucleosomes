@@ -120,11 +120,11 @@ library(nucleoSim)
 
 val.num       <- 50     ### Number of well-positioned nucleosomes
 val.del       <- 10     ### Number of well-positioned nucleosomes to delete
-val.var       <- 30     ### variance associated to well-positioned nucleosomes
+val.var       <- 30     ### Variance associated to well-positioned nucleosomes
 val.fuz       <- 10     ### Number of fuzzy nucleosomes
-val.fuz.var   <- 50     ### variance associated to fuzzy nucleosomes
+val.fuz.var   <- 50     ### Variance associated to fuzzy nucleosomes
 val.max.cover <- 70     ### Maximum coverage for one nucleosome
-val.nuc.len   <- 147    ### Distance between nucleosomes
+val.nuc.len   <- 147    ### Nucleosome length
 val.len.var   <- 10     ### Variance associated to the length of the reads
 val.lin.len   <- 20     ### The length of the DNA linker
 val.rnd.seed  <- 100    ### Set seed when result needs to be reproducible
