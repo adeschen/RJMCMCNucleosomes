@@ -54,9 +54,9 @@ concentrations of directional reads. Second, it uses a Multinomial-Dirichlet
 model in the construction of an informative prior distribution coupled to a 
 t-mixture model with unknown degrees of freedom. Third, the number of 
 nucleosomes is considered to be a random variable and refers to a prior 
-distribution. Fourth, the unknown parameters are simultaneously using the 
-reversible jump Markov chain Monte Carlo (RJMCMC) simulation technique 
-(see for instance @Green1995 and @Richardson1997). 
+distribution. Fourth, the unknown parameters are simultaneously estimated 
+using the reversible jump Markov chain Monte Carlo (RJMCMC) simulation 
+technique (see for instance @Green1995 and @Richardson1997). 
 
 Detailed information about the model can be found in the article 
 mentioned in the citing section.
