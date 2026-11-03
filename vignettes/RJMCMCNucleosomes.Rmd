@@ -363,7 +363,7 @@ file in the current working directory.
 Maintenance work for this version of the package (Bioconductor coding
 compliance with `BiocCheck`, native routine registration for the C++ code, 
 bug fixes, unit tests, continuous integration with GitHub Actions and 
-proofreading of the vignette and function documentation) was 
+proofreading and improvement of the vignette and function documentation) was 
 carried out with assistance from Claude Code (Claude Opus 5.5, Anthropic). 
 All changes were reviewed, tested and approved by the
 package maintainer, who remains responsible for the package content.
