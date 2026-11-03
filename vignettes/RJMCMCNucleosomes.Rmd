@@ -292,8 +292,8 @@ plotNucleosomes(nucleosomePositions = resultsBeforeAndAfter, reads = reads,
 # RJMCMCNucleosomes analysis of one chromosome in one step
 
 The `rjmcmcCHR` function can analyze an entire chromosome by 
-automatically split the reads into segments, run `rjmcmc` on each 
-segment, merge and post-process the results. The intermediate results are 
+automatically splitting the reads into segments, running `rjmcmc` on each 
+segment, merging and post-processing the results. The intermediate results are 
 saved in a directory set by the `dirOut` parameter.
 
 On real chromosome data, the `rjmcmcCHR` can take some time to execute. We
