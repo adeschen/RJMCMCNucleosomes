@@ -258,7 +258,7 @@ is available in the **RJMCMCNucleosomes** package.
 
 The `plotNucleosomes` function needs the nucleosome positions and the reads, 
 in an `GRanges` format, to create a graph. When reads are used 
-to predict more than one set of nucleosome positions (as examples, before and
+to predict more than one set of nucleosome positions (for example, before and
 after post-treatment or results from different software), the predictions can
 be merged in a `list` so that all predictions can be plotted 
 simultaneously.
