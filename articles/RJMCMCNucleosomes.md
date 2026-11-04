@@ -30,6 +30,9 @@ following:
 > 2194-6302, December 2015,
 > [doi:10.1515/sagmb-2014-0098](https://doi.org/10.1515/sagmb-2014-0098)
 
+The Research Resource Identifier (RRID) for the **RJMCMCNucleosomes**
+package is **RRID:SCR_029241**.
+
 ## Introduction
 
 Global gene expression patterns are established and maintained by the
@@ -436,7 +439,7 @@ Here is the output of
 [`sessionInfo()`](https://rdrr.io/r/utils/sessionInfo.html) on the
 system on which this document was compiled:
 
-    ## R Under development (unstable) (2026-11-03 r90835)
+    ## R Under development (unstable) (2026-11-02 r90827)
     ## Platform: x86_64-pc-linux-gnu
     ## Running under: Ubuntu 24.04.4 LTS
     ## 

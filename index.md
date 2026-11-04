@@ -22,6 +22,10 @@ following:
 > 2194-6302, December 2015, [doi:
 > 10.1515/sagmb-2014-0098](http://dx.doi.org/10.1515/sagmb-2014-0098)
 
+## Research Resource Identifier (RRID)
+
+The RRID for the **RJMCMCNucleosomes** package is **RRID:SCR_029241**.
+
 ## Bioconductor Package
 
 [![Bioconductor
