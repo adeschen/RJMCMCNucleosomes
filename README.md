@@ -1,4 +1,4 @@
-Genome-Wide Nucleosome Positioning using High-Throughput Short-Read Data (MNase-Seq)
+Genome-Wide Nucleosome Positioning using High-Throughput Short-Read Data (MNase-Seq) <img src="man/figures/logo.png" align="right" height="139" alt="RJMCMCNucleosomes logo" />
 =====================
 
 [![R-CMD-check-bioc](https://github.com/adeschen/RJMCMCNucleosomes/actions/workflows/check-bioc.yaml/badge.svg)](https://github.com/adeschen/RJMCMCNucleosomes/actions/workflows/check-bioc.yaml)
@@ -62,3 +62,12 @@ For more information on Artistic 2.0 License see
 If you have any bugs or feature requests, [let us know](https://github.com/adeschen/RJMCMCNucleosomes/issues). 
 
 Thanks!
+
+
+## Logo ##
+
+The RJMCMCNucleosomes logo is licensed under the
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Its source files are available in the
+[RJMCMCNucleosomes_logo](https://github.com/adeschen/RJMCMCNucleosomes_logo)
+repository.
