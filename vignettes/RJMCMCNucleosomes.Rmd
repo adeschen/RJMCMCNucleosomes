@@ -31,6 +31,8 @@ following:
 
 >Samb R, Khadraoui K, Belleau P, et al. (2015) Using informative Multinomial-Dirichlet prior in a t-mixture with reversible jump estimation of nucleosome positions for genome-wide profiling. Statistical Applications in Genetics and Molecular Biology. Volume 14, Issue 6, Pages 517-532, ISSN (Online) 1544-6115, ISSN (Print) 2194-6302, December 2015, <a href="https://doi.org/10.1515/sagmb-2014-0098">doi:10.1515/sagmb-2014-0098</a>
 
+The Research Resource Identifier (RRID) for the **RJMCMCNucleosomes** package 
+is **RRID:SCR_029241**.
 
 # Introduction
 
