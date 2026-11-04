@@ -20,7 +20,7 @@ following:
 > Statistical Applications in Genetics and Molecular Biology. Volume 14,
 > Issue 6, Pages 517-532, ISSN (Online) 1544-6115, ISSN (Print)
 > 2194-6302, December 2015, [doi:
-> 10.1515/sagmb-2014-0098](http://dx.doi.org/10.1515/sagmb-2014-0098)
+> 10.1515/sagmb-2014-0098](http://doi.org/10.1515/sagmb-2014-0098)
 
 ## Research Resource Identifier (RRID)
 
