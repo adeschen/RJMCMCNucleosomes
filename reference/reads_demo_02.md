@@ -65,8 +65,8 @@ rjmcmc(reads = reads_demo_02, nbrIterations = 150, lambda = 3, kMax = 30,
 #> GRanges object with 2 ranges and 0 metadata columns:
 #>            seqnames    ranges strand
 #>               <Rle> <IRanges>  <Rle>
-#>   [1] chr_SYNTHETIC     10169      *
-#>   [2] chr_SYNTHETIC     10564      *
+#>   [1] chr_SYNTHETIC     10284      *
+#>   [2] chr_SYNTHETIC     10625      *
 #>   -------
 #>   seqinfo: 1 sequence from an unspecified genome; no seqlengths
 ```

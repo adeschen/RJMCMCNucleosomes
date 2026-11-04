@@ -39,13 +39,14 @@ rjmcmc(reads = reads_demo_01, nbrIterations = 100, lambda = 3, kMax = 30,
 #>     lambda = 3, minInterval = 146, maxInterval = 292, minReads = 5)
 #> 
 #> Number of nucleosomes:
-#> [1] 1
+#> [1] 2
 #> 
 #> Nucleosomes positions:
-#> GRanges object with 1 range and 0 metadata columns:
+#> GRanges object with 2 ranges and 0 metadata columns:
 #>            seqnames    ranges strand
 #>               <Rle> <IRanges>  <Rle>
-#>   [1] chr_SYNTHETIC     10068      *
+#>   [1] chr_SYNTHETIC     10074      *
+#>   [2] chr_SYNTHETIC     10314      *
 #>   -------
 #>   seqinfo: 1 sequence from an unspecified genome; no seqlengths
 ```

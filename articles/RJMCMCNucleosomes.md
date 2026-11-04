@@ -8,7 +8,7 @@ Deschênes \[cre, aut\] (ORCID: <https://orcid.org/0000-0001-7846-6749>),
 Khader Khadraoui \[aut\], Lajmi Lakhal-Chaieb \[aut\], Arnaud Droit
 \[aut\]\
 **Version**: 1.37.1\
-**Compiled date**: 2026-11-03\
+**Compiled date**: 2026-11-04\
 **License**: Artistic-2.0\
 
 \
@@ -436,7 +436,7 @@ Here is the output of
 [`sessionInfo()`](https://rdrr.io/r/utils/sessionInfo.html) on the
 system on which this document was compiled:
 
-    ## R Under development (unstable) (2026-11-01 r90825)
+    ## R Under development (unstable) (2026-11-03 r90835)
     ## Platform: x86_64-pc-linux-gnu
     ## Running under: Ubuntu 24.04.4 LTS
     ## 

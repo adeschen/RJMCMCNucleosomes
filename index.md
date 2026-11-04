@@ -70,3 +70,12 @@ If you have any bugs or feature requests, [let us
 know](https://github.com/adeschen/RJMCMCNucleosomes/issues).
 
 Thanks!
+
+## Logo
+
+The RJMCMCNucleosomes logo is licensed under the [Creative Commons
+Attribution 4.0 International License (CC BY
+4.0)](https://creativecommons.org/licenses/by/4.0/). Its source files
+are available in the
+[RJMCMCNucleosomes_logo](https://github.com/adeschen/RJMCMCNucleosomes_logo)
+repository.
